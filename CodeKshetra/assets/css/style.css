@@ -475,7 +475,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(45deg, #ff4e00, #ec9f05);
+  background: url('../img/hero-bg.png') center center/cover no-repeat;
   overflow: hidden;
   position: relative;
 }
@@ -495,6 +495,10 @@ h6 {
   left: 0;
   right: 0;
   animation: animateBackground 20s linear infinite;
+  backdrop-filter: blur(5px);
+  /* Adjust the blur intensity as needed */
+  -webkit-backdrop-filter: blur(5px);
+  /* For Safari */
 }
 
 @keyframes animateBackground {
@@ -519,6 +523,8 @@ h6 {
   flex-direction: column;
   text-align: center;
   padding: 0 15px;
+  z-index: 1;
+  /* Ensure the content is above the blurred background */
 }
 
 @media (max-width: 991px) {
@@ -622,7 +628,7 @@ h6 {
   border-radius: 0;
 }
 
-#hero .about-btn {
+#hero .devfolio-btn {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -638,9 +644,40 @@ h6 {
   border: 2px solid #f82249;
 }
 
-#hero .about-btn:hover {
+#hero .devfolio-btn img {
+  width: 20px;
+  height: auto;
+  margin-right: 8px;
+  filter: brightness(0) invert(1);
+}
+
+#hero .devfolio-btn:hover {
   background: #f82249;
   color: #fff;
+}
+
+#hero .countdown-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+#hero .countdown-item {
+  text-align: center;
+  color: whitesmoke;
+  margin: 0 10px;
+  border-radius: 50%;
+  border: 3px solid #f82249;
+  padding: 0px 20px;
+  width: 80px;
+  height: 80px;
+}
+
+#hero .countdown-item span {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 @keyframes pulsate-btn {
@@ -659,7 +696,7 @@ h6 {
 # About Section
 --------------------------------------------------------------*/
 #about {
-  background: linear-gradient(45deg, #ff4e00, #ec9f05);
+  background: linear-gradient(45deg, #080E2B, #260E3A, #380b44);
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -713,6 +750,40 @@ h6 {
   font-size: 14px;
   margin-bottom: 20px;
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+# About CodeKshetra Section
+--------------------------------------------------------------*/
+#aboutCodeKshetra {
+  padding: 60px 0 30px 0;
+}
+
+#aboutCodeKshetra h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+#aboutCodeKshetra p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+#aboutCodeKshetra a {
+  color: #f82249;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#aboutCodeKshetra a:hover {
+  text-decoration: underline;
+}
+
+#aboutCodeKshetra img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /*--------------------------------------------------------------
