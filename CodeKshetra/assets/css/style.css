@@ -1078,56 +1078,56 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Hotels Section
+# Prizes Section
 --------------------------------------------------------------*/
-#hotels {
+#Prizes {
   padding: 60px 0;
 }
 
-#hotels .hotel {
+#Prizes .prize {
   border: 1px solid #e0e5fa;
   background: #fff;
   margin-bottom: 30px;
 }
 
-#hotels .hotel:hover .hotel-img img {
+#Prizes .prize:hover .prize-img img {
   transform: scale(1.1);
 }
 
-#hotels .hotel-img {
+#Prizes .prize-img {
   overflow: hidden;
   margin-bottom: 15px;
 }
 
-#hotels .hotel-img img {
+#Prizes .prize-img img {
   transition: 0.3s ease-in-out;
 }
 
-#hotels h3 {
+#Prizes h3 {
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 5px;
   padding: 0 20px;
 }
 
-#hotels a {
+#Prizes a {
   color: #152b79;
 }
 
-#hotels a:hover {
+#Prizes a:hover {
   color: #A90377;
 }
 
-#hotels .stars {
+#Prizes .stars {
   padding: 0 20px;
   margin-bottom: 5px;
 }
 
-#hotels .stars i {
+#Prizes .stars i {
   color: rgb(255, 195, 29);
 }
 
-#hotels p {
+#Prizes p {
   padding: 0 20px;
   margin-bottom: 20px;
   color: #060c22;
