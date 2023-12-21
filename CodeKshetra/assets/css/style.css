@@ -171,9 +171,10 @@ h6 {
 }
 
 #header #logo img {
+  filter: grayscale(100%) invert(100%) brightness(100%);
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 50px !important;
 }
 
 @media (max-width: 992px) {
@@ -495,9 +496,9 @@ h6 {
   left: 0;
   right: 0;
   animation: animateBackground 20s linear infinite;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(0.7px);
   /* Adjust the blur intensity as needed */
-  -webkit-backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(0.7px);
   /* For Safari */
 }
 
@@ -784,6 +785,20 @@ h6 {
   max-width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#logoCanvas {
+  position: relative;
+  height: 400px;
+  margin: 10px 0;
+  padding: 20px;
+  border: 1px solid #060c22;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #060c22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*--------------------------------------------------------------
@@ -1238,6 +1253,10 @@ h6 {
   height: auto;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /*--------------------------------------------------------------
 # F.A.Q Section
 --------------------------------------------------------------*/
@@ -1604,16 +1623,22 @@ h6 {
   background: #101522;
   padding: 0 0 25px 0;
   color: #eee;
+  border-top-left-radius: 60px;
+  /* Add this line to round the top-left corner */
   font-size: 14px;
 }
 
 #footer .footer-top {
   background: #040919;
   padding: 60px 0 30px 0;
+  border-top-left-radius: 60px;
+  /* Add this line to round the top-left corner */
 }
 
 #footer .footer-top .footer-info {
   margin-bottom: 30px;
+  border-top-left-radius: 60px;
+  /* Add this line to round the top-left corner */
 }
 
 #footer .footer-top .footer-info h3 {
@@ -1627,8 +1652,8 @@ h6 {
 }
 
 #footer .footer-top .footer-info img {
-  height: 40px;
-  margin-bottom: 10px;
+  height: 120px;
+  margin-bottom: 20px;
 }
 
 #footer .footer-top .footer-info p {
