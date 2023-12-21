@@ -1082,58 +1082,84 @@ h6 {
 --------------------------------------------------------------*/
 #Prizes {
   padding: 60px 0;
+
 }
 
-#Prizes .prize {
+#row {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+#row .prize {
+  
   border: 1px solid #e0e5fa;
-  background: #fff;
-  margin-bottom: 30px;
+  border-radius: 1rem;
+  background-color: #13032af7;
+  margin-bottom: 3rem;
+  width: 50% ;
+  margin-left: 2rem;
 }
 
-#Prizes .prize:hover .prize-img img {
+#row .prize:hover  {
   transform: scale(1.1);
 }
 
-#Prizes .prize-img {
+#row .prize-img {
+ 
   overflow: hidden;
   margin-bottom: 15px;
+ 
 }
 
-#Prizes .prize-img img {
+#row .prize  {
   transition: 0.3s ease-in-out;
+
 }
 
-#Prizes h3 {
+#row h3 {
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 5px;
   padding: 0 20px;
+  color: white;
 }
 
-#Prizes a {
+#row a {
   color: #152b79;
 }
 
-#Prizes a:hover {
+#row a:hover {
   color: #A90377;
 }
 
-#Prizes .stars {
+#row .stars {
   padding: 0 20px;
   margin-bottom: 5px;
 }
 
-#Prizes .stars i {
-  color: rgb(255, 195, 29);
-}
 
-#Prizes p {
+
+#row p {
   padding: 0 20px;
   margin-bottom: 20px;
   color: #060c22;
   font-style: italic;
   font-size: 15px;
 }
+@media (max-width: 768px) {
+
+  #row .prize{
+    width: 70%;
+    margin-left: 0;
+  }
+  #row {
+    flex-direction: column; 
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Gallery Section
