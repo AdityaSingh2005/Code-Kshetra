@@ -15,7 +15,29 @@ const gltfLoader = new GLTFLoader();
 let object;
 let ambientLightIntensity = 0.8; // Set initial ambient light intensity
 
-const initialScale = window.innerWidth < 600 ? 0.05 : 0.1; // Adjust scale for small devices
+const getInitialScale = () => {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    if (width < 600 && height < 600) {
+        // Phone
+        return 0.04;
+    } else if (width < 1024 && height < 768) {
+        // Tablet
+        return 0.05;
+    } else if (width < 1440) {
+        // Laptop
+        return 0.08;
+    } else if (width < 1920) {
+        // Monitor
+        return 0.1;
+    } else {
+        // TV or larger screens
+        return 0.15;
+    }
+};
+
+const initialScale = getInitialScale();
 
 gltfLoader.load('./assets/3DLogo.gltf', (gltf) => {
     gltf.scene.scale.set(initialScale, initialScale, initialScale);
