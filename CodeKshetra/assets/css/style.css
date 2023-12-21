@@ -787,6 +787,21 @@ h6 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+#logoCanvas {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 10px 0;
+  padding: 20px;
+  border: 1px solid #060c22;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #060c22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*--------------------------------------------------------------
 # Speakers Section
 --------------------------------------------------------------*/
