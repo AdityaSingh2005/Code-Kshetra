@@ -657,7 +657,7 @@ h6 {
   color: #fff;
 }
 
-#hero .countdown-container {
+/* #hero .countdown-container {
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -681,6 +681,67 @@ h6 {
   font-weight: bold;
 }
 
+*/ .countdown {
+  --number-color: hsl(0 0% 100%);
+  --text-color: hsl(0, 0%, 69%);
+  --dot-color: hsl(0, 0%, 33%);
+  --dot-color-remaining: #A90377;
+  --dot-color-active: hsl(182, 100%, 66%);
+  font-family: system-ui, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: min(40rem, 100%);
+  margin-inline: auto;
+  container: inline-size;
+
+  >.part {
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+
+    >.remaining {
+      grid-area: 1/1;
+      color: hsl(0 0% 100%);
+      display: grid;
+      text-align: center;
+      font-size: 4cqi;
+
+      >.number {
+        color: var(--number-color);
+      }
+
+      >.text {
+        color: var(--text-color);
+        text-transform: uppercase;
+        font-size: 0.25em;
+      }
+    }
+
+    >.dot-container {
+      grid-area: 1/1;
+      height: 100%;
+      width: 4%;
+      rotate: calc(360deg / var(--dots) * var(--dot-idx));
+
+      >.dot {
+        width: 100%;
+        aspect-ratio: 1/1;
+        background-color: var(--dot-color);
+        border-radius: 50%;
+        transition: background-color .25s;
+
+        &[data-active=true] {
+          background-color: var(--dot-color-remaining);
+
+          &[data-lastactive=true] {
+            background-color: var(--dot-color-active);
+          }
+        }
+      }
+    }
+  }
+}
 @keyframes pulsate-btn {
   0% {
     transform: scale(0.6, 0.6);
@@ -1104,32 +1165,32 @@ h6 {
   padding: 60px 0;
   display: flex;
   flex-direction: row;
-  align-items: center; 
+  align-items: center;
   justify-content: space-between;
 }
 
 #row .prize {
-  
+
   border: 1px solid #e0e5fa;
   border-radius: 1rem;
   background-color: #13032af7;
   margin-bottom: 3rem;
-  width: 50% ;
+  width: 50%;
   margin-left: 2rem;
 }
 
-#row .prize:hover  {
+#row .prize:hover {
   transform: scale(1.1);
 }
 
 #row .prize-img {
- 
+
   overflow: hidden;
   margin-bottom: 15px;
- 
+
 }
 
-#row .prize  {
+#row .prize {
   transition: 0.3s ease-in-out;
 
 }
@@ -1164,14 +1225,16 @@ h6 {
   font-style: italic;
   font-size: 15px;
 }
+
 @media (max-width: 768px) {
 
-  #row .prize{
+  #row .prize {
     width: 70%;
     margin-left: 0;
   }
+
   #row {
-    flex-direction: column; 
+    flex-direction: column;
   }
 }
 
