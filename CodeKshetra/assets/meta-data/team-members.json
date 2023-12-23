@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Navneet Baid",
+        "role": "Developer",
+        "image": "assets/img/speakers/1.jpg",
+        "insta": "insta",
+        "level": "Pro",
+        "linkedin": "linkedin"
+    },
+    {
+        "name": "Navneet Baid",
+        "role": "Designer",
+        "image": "assets/img/speakers/2.jpg",
+        "insta": "insta",
+        "level": "Pro",
+        "linkedin": "linkedin"
+    },
+    {
+        "name": "Navneet Baid",
+        "role": "Developer",
+        "image": "assets/img/speakers/3.jpg",
+        "insta": "insta",
+        "level": "Pro",
+        "linkedin": "linkedin"
+    },
+    {
+        "name": "Navneet Baid",
+        "role": "Designer",
+        "image": "assets/img/speakers/4.jpg",
+        "insta": "insta",
+        "level": "Pro",
+        "linkedin": "linkedin"
+    }
+]
