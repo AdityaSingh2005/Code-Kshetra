@@ -742,6 +742,7 @@ h6 {
     }
   }
 }
+
 @keyframes pulsate-btn {
   0% {
     transform: scale(0.6, 0.6);
@@ -862,20 +863,149 @@ h6 {
   align-items: center;
 }
 
+.load-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-top: 20px;
+  color: #777;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+}
+
+.load-more:hover {
+  color: #555;
+}
 /*--------------------------------------------------------------
-# Speakers Section
---------------------------------------------------------------*/
-#speakers {
+# Our Team Section --------------------------------------------------------------*/ #ourTeam {
   padding: 60px 0 30px 0;
 }
 
-#speakers .speaker {
+#ourTeam-details .details h2 {
+  color: #112363;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#ourTeam-details .details .social {
+  margin-bottom: 15px;
+}
+
+
+#ourTeam-details .social a:hover {
+  background: #A90377;
+  color: #fff;
+}
+
+#ourTeam-details .social a i {
+  font-size: 16px;
+  line-height: 0;
+}
+
+#ourTeam-details .details p {
+  color: #112363;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* Content-1:Start */
+#ourTeam .box {
+  width: 250px;
+  height: fit-content;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  background: #ededed;
+}
+
+#ourTeam .box1 {
+  margin-top: 10px;
+}
+
+#ourTeam .content {
+  margin: 15px 2px;
+}
+
+#ourTeam .image img {
+  height: 120px;
+  width: 120px;
+  border-radius: 35%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+#ourTeam .level {
+  font-size: 0.7em;
+  background-color: rgb(164, 189, 183, 0.5);
+  width: 50px;
+  padding: 0px;
+  border-radius: 5px;
+  font-weight: bolder;
+  margin-top: 10px !important;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0px auto 0px;
+}
+
+#ourTeam .name {
+  font-size: 1.25em;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+#ourTeam .job_title {
+  font-size: 0.65em;
+  font-weight: bolder;
+  color: gray;
+  margin-top: -2px;
+}
+
+#ourTeam .job_discription {
+  font-size: 0.7em;
+  color: gray;
+  margin: 10px 30px 20px;
+}
+
+#ourTeam .icons {
+  margin: 0px 30px;
+  font-size: 1.5em;
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-evenly;
+}
+
+#ourTeam .icons button {
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  font-size: 1em;
+}
+
+#ourTeam p {
+  padding: 0 0 0 0;
+  margin: 0 0 2px 0;
+}
+
+/* Content-1:End */
+/*--------------------------------------------------------------
+# judges Section
+--------------------------------------------------------------*/
+#judges {
+  padding: 60px 0 30px 0;
+}
+
+#judges .judge {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
 }
 
-#speakers .speaker .details {
+#judges .judge .details {
   background: rgba(6, 12, 34, 0.76);
   position: absolute;
   left: 0;
@@ -886,57 +1016,57 @@ h6 {
   transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-#speakers .speaker .details h3 {
+#judges .judge .details h3 {
   color: #fff;
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
 }
 
-#speakers .speaker .details p {
+#judges .judge .details p {
   color: #fff;
   font-size: 15px;
   margin-bottom: 10px;
   font-style: italic;
 }
 
-#speakers .speaker .details .social {
+#judges .judge .details .social {
   height: 40px;
 }
 
-#speakers .speaker .details .social i {
+#judges .judge .details .social i {
   line-height: 0;
   margin: 0 2px;
 }
 
-#speakers .speaker .details a {
+#judges .judge .details a {
   color: #fff;
 }
 
-#speakers .speaker .details a:hover {
+#judges .judge .details a:hover {
   color: #A90377;
 }
 
-#speakers .speaker:hover .details {
+#judges .judge:hover .details {
   bottom: 0;
 }
 
-#speakers-details {
+#judges-details {
   padding: 60px 0;
 }
 
-#speakers-details .details h2 {
+#judges-details .details h2 {
   color: #112363;
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-#speakers-details .details .social {
+#judges-details .details .social {
   margin-bottom: 15px;
 }
 
-#speakers-details .details .social a {
+#judges-details .details .social a {
   background: #e9edfb;
   color: #112363;
   line-height: 1;
@@ -951,17 +1081,17 @@ h6 {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-#speakers-details .details .social a:hover {
+#judges-details .details .social a:hover {
   background: #A90377;
   color: #fff;
 }
 
-#speakers-details .details .social a i {
+#judges-details .details .social a i {
   font-size: 16px;
   line-height: 0;
 }
 
-#speakers-details .details p {
+#judges-details .details p {
   color: #112363;
   font-size: 15px;
   margin-bottom: 10px;
@@ -1046,7 +1176,7 @@ h6 {
   display: inline-block;
 }
 
-#schedule .schedule-item .speaker {
+#schedule .schedule-item .judge {
   width: 60px;
   height: 60px;
   overflow: hidden;
@@ -1055,7 +1185,7 @@ h6 {
   margin-right: 10px;
 }
 
-#schedule .schedule-item .speaker img {
+#schedule .schedule-item .judge img {
   height: 100%;
   transform: translateX(-50%);
   margin-left: 50%;
@@ -1081,6 +1211,20 @@ h6 {
   margin-bottom: 0;
 }
 
+.stay-tuned-button {
+  display: inline-block;
+  padding: 15px 40px;
+  background: linear-gradient(45deg, #3498db, #8e44ad);
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease-in-out;
+}
+
+.stay-tuned-button:hover {
+  background: linear-gradient(45deg, #2980b9, #9b59b6);
+}
 /*--------------------------------------------------------------
 # Venue Section
 --------------------------------------------------------------*/
@@ -1290,6 +1434,34 @@ h6 {
   padding: 60px 0;
 }
 
+#supporters .section-header h2 {
+  color: #343a40;
+  /* Set text color */
+}
+
+#supporters .section-header p {
+  color: #6c757d;
+  /* Set text color */
+}
+
+#supporters .text-center {
+  margin-top: 30px;
+  /* Add some top margin */
+}
+
+#supporters .text-center i {
+  font-size: 3rem;
+  /* Adjust icon size */
+  color: #007bff;
+  /* Set icon color */
+}
+
+#supporters .text-center p {
+  font-size: 1.2rem;
+  /* Adjust text size */
+  color: #343a40;
+  /* Set text color */
+}
 #supporters .supporters-wrap {
   border: 1px solid #e0e5fa;
   margin-bottom: 30px;
