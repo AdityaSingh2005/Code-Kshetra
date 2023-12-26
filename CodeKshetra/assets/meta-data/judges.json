@@ -1,30 +1,4 @@
 [
-    {
-        "image": "assets/img/speakers/2.jpg",
-        "name": "Judge 1",
-        "insta": "judge1_insta",
-        "linkedin": "judge1_linkedin",
-        "designation": "Designation 1"
-    },
-    {
-        "image": "assets/img/speakers/1.jpg",
-        "name": "Judge 2",
-        "insta": "judge2_insta",
-        "linkedin": "judge2_linkedin",
-        "designation": "Designation 2"
-    },
-    {
-        "image": "assets/img/speakers/4.jpg",
-        "name": "Judge 3",
-        "insta": "judge2_insta",
-        "linkedin": "judge2_linkedin",
-        "designation": "Designation 3"
-    },
-    {
-        "image": "assets/img/speakers/3.jpg",
-        "name": "Judge 4",
-        "insta": "judge2_insta",
-        "linkedin": "judge2_linkedin",
-        "designation": "Designation 4"
-    }
+   
+   
 ]

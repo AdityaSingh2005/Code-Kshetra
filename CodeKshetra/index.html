@@ -66,10 +66,24 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css"
     rel="stylesheet">
+  <!-- Add these lines to the head section of your HTML file -->
+  <link rel="stylesheet"
+    type="text/css"
+    href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+  <script type="text/javascript"
+    charset="utf8"
+    src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript"
+    charset="utf8"
+    src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
 </head>
 
 <body>
-
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
   <!-- ======= Header ======= -->
   <header id="header"
     class="d-flex align-items-center ">
@@ -77,10 +91,16 @@
 
       <div id="logo"
         class="me-auto">
-        <!-- <h1><a href="index.html">Code<span>क्षेत्र</span></a></h1> -->
-        <h1><a href="./"><img src="./assets/img/logo.png"
-              alt="Code Kshetra"
-              class="img-fluid"></a></h1>
+        <h1><img src="./assets/img/logo.png"
+            alt="Code Kshetra"
+            id="header-logo-img"
+            class="img-fluid">
+          <a href="./"
+            id="header-logo-link"
+            style="display: none;">
+            Code<span>क्षेत्र</span>
+          </a>
+        </h1>
       </div>
 
       <nav id="navbar"
@@ -89,18 +109,31 @@
           <li><a class="nav-link scrollto active"
               href="#hero">Home</a></li>
           <li><a class="nav-link scrollto"
+              href="#judges">Judges</a></li>
+          <li><a class="nav-link scrollto"
               href="#gallery">Themes</a></li>
+          <li><a class="nav-link scrollto"
+              href="./mentors.html">Mentors</a></li>
           <li><a class="nav-link scrollto"
               href="#schedule">Schedule</a></li>
           <li><a class="nav-link scrollto"
-              href="#hotels">Prizes</a></li>
+              href="#Prizes">Prizes</a></li>
           <li><a class="nav-link scrollto"
-              href="#contact">Contact</a></li>
+              href="./our-team.html">Team</a></li>
+          <li class="dropdown">
+            <a href="#"><span>Get Involved</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Become a Sponsor</a></li>
+              <li><a href="#">Become a Mentor</a></li>
+              <li><a href="#">Become a Coordinator</a></li>
+            </ul>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
     </div>
   </header><!-- End Header -->
+
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
@@ -109,26 +142,6 @@
       data-aos-delay="100">
       <h1 class="mb-4 pb-0">Codeक्षेत्र: The Ultimate<br><span>36-Hour Hackathon</span></h1>
       <p class="mb-4 pb-0">February 2024, JIMS Rohini Sector-5</p>
-      <!-- <div class="countdown-container"
-        id="countdown">
-        <div class="countdown-item">
-          <span id="days">00</span>
-          <p>D</p>
-        </div>
-        <div class="countdown-item">
-          <span id="hours">00</span>
-          <p>H</p>
-        </div>
-        <div class="countdown-item">
-          <span id="minutes">00</span>
-          <p>M</p>
-        </div>
-        <div class="countdown-item">
-          <span id="seconds">00</span>
-          <p>S</p>
-        </div>
-      </div> -->
-
       <div class="countdown"
         data-target-date="2024-02-10 09:00:00"></div>
 
@@ -204,11 +217,6 @@
           </div>
           <div class="col-lg-6">
             <div id="logoCanvas"></div>
-
-            <!-- <img src="./assets/img/about.jpg"
-                class="img-fluid"
-                alt="Code-Kshetra"
-                id="originalImage"> -->
           </div>
         </div>
       </div>
@@ -221,7 +229,7 @@
         <div class="section-header">
           <h2>Event Judges</h2>
           <p>Meet our esteemed judges</p>
-          </div>
+        </div>
         <div id="judges-container"
           class="row">
         </div>
@@ -239,46 +247,129 @@
       class="section-with-bg">
       <div class="container"
         data-aos="fade-up">
-        <div class="section-header">
-          <h2>Themes To Hack</h2>
-          <p>Check our Themes from the HACK</p>
-        </div>
-      </div>
+        <!-- Themes Section -->
+        <div id="themes"
+          class="tab-content">
+          <div class="section-header">
+            <h2>Themes To Hack</h2>
+            <p>Check our Themes from the HACK</p>
+          </div>
+          <!-- Themes Gallery Slider -->
+          <div class="gallery-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide"><a href="assets/img/themes/1.png"
+                  class="gallery-lightbox"><img src="assets/img/themes/1.png"
+                    class="img-fluid"
+                    alt=""></a></div>
+              <div class="swiper-slide"><a href="assets/img/themes/2.png"
+                  class="gallery-lightbox"><img src="assets/img/themes/2.png"
+                    class="img-fluid"
+                    alt=""></a></div>
+              <div class="swiper-slide"><a href="assets/img/themes/3.png"
+                  class="gallery-lightbox"><img src="assets/img/themes/3.png"
+                    class="img-fluid"
+                    alt=""></a></div>
+              <div class="swiper-slide"><a href="assets/img/themes/4.png"
+                  class="gallery-lightbox"><img src="assets/img/themes/4.png"
+                    class="img-fluid"
+                    alt=""></a></div>
+              <div class="swiper-slide"><a href="assets/img/themes/5.png"
+                  class="gallery-lightbox"><img src="assets/img/themes/5.png"
+                    class="img-fluid"
+                    alt=""></a></div>
+              <div class="swiper-slide"><a href="assets/img/themes/AI AND ML.png"
+                  class="gallery-lightbox"><img src="assets/img/themes/AI AND ML.png"
+                    class="img-fluid"
+                    alt=""></a></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div><!-- End Themes Section -->
+        <!-- Problem Statements Section -->
+        <div id="problems"
+          class="tab-content mt-5">
+          <div class="section-header">
+            <h2>Problem Statements</h2>
+            <p>Explore the Problem Statements</p>
+          </div>
+          <!-- Problem Statements Content in Table Format -->
+          <div class="card">
+            <div class="body">
+              <div class="table-responsive">
+                <table class="table table-bordered dataTable">
+                  <thead>
+                    <tr>
+                      <th>Problem Statement</th>
+                      <th>Category</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Add your Problem Statements content here -->
+                    <!-- <tr>
+                                                                              <td>Problem Statement 1</td>
+                                                                              <td>Category 1</td>
+                                                                              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur leo ac nisi
+                                                                                volutpat,
+                                                                                eu
+                                                                                aliquet elit aliquam.</td>
+                                                                            </tr> -->
 
-      <div class="gallery-slider swiper">
-        <div class="swiper-wrapper align-items-center">
-          <div class="swiper-slide"><a href="assets/img/themes/1.png"
-              class="gallery-lightbox"><img src="assets/img/themes/1.png"
-                class="img-fluid"
-                alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/themes/2.png"
-              class="gallery-lightbox"><img src="assets/img/themes/2.png"
-                class="img-fluid"
-                alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/themes/3.png"
-              class="gallery-lightbox"><img src="assets/img/themes/3.png"
-                class="img-fluid"
-                alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/themes/4.png"
-              class="gallery-lightbox"><img src="assets/img/themes/4.png"
-                class="img-fluid"
-                alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/themes/5.png"
-              class="gallery-lightbox"><img src="assets/img/themes/5.png"
-                class="img-fluid"
-                alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/themes/AI AND ML.png"
-              class="gallery-lightbox"><img src="assets/img/themes/AI AND ML.png"
-                class="img-fluid"
-                alt=""></a></div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-
+                  </tbody>
+                  </table>
+                  </div>
+                  </div>
+                  </div>
+                  </div><!-- End Problem Statements Section -->
     </section><!-- End Themes Section -->
+    <!-- ======= Mentors Section ======= -->
+    <section id="mentors">
+      <div class="container"
+        data-aos="fade-up">
+        <div class="section-header">
+          <h2>Meet Our Mentors</h2>
+          <p>Get to know the experienced mentors guiding our participants</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 d-flex justify-content-center mb-3">
+            <img src="./assets/img/mentors.svg"
+              alt="Code Kshetra Mentors"
+              class="img-fluid"
+              style="max-width: 300px; height: auto;">
+          </div>
+          <div class="col-lg-6">
+            <div class="mentor-description">
+              <p>
+                Meet the experienced mentors who play a crucial role in guiding participants through CodeKshetra's
+                hackathon
+                event. Committed to
+                fostering learning and providing valuable insights, our team of mentors brings a wealth of expertise to
+                the
+                hackathon.
+                With a passion for technology and a wealth of industry knowledge, our mentors contribute to the success
+                of
+                CodeKshetra hackathon.
+              </p>
+              <p>
+                The mentors actively engage with participants, offering guidance on technical challenges, providing
+                industry
+                perspectives, and supporting the overall learning experience. Their diverse expertise, ranging from
+                software
+                development to business strategy, enhances the educational value of the hackathon.
+              </p>
+            </div>
+            <a href="mentors.html"
+              target="_blank"
+              class="btn mt-2">Meet Mentors</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Mentors Section -->
 
     <!-- ======= Schedule Section ======= -->
-    <section id="schedule">
+    <section id="schedule"
+      class="section-with-bg">
       <div class="container"
         data-aos="fade-up">
         <div class="section-header">
@@ -613,13 +704,12 @@
     <!-- End Venue Section -->
 
     <!-- =======Prize Section ======= -->
-    <section id="Prizes"
-      class="section-with-bg">
+    <section id="Prizes">
       <div class="container"
         data-aos="fade-up">
         <div class="section-header">
           <h2>PRIZES & PERKS</h2>
-          <p>" Prizes are the silent cheers for your relentless efforts "</p>
+          <p>Prizes are the silent cheers for your relentless efforts.</p>
         </div>
         <div id="row"
           data-aos="fade-up"
@@ -632,7 +722,7 @@
                 class="img-fluid">
             </div>
             <div style="margin: 1rem 0; ">
-              <h3>Prizes worth 50K+ INR to top performers</h3>
+              <h3>Prizes worth 25K+ INR to top performers</h3>
             </div>
           </div>
           <!-- Merchandise & Coupons card-->
@@ -662,7 +752,8 @@
     </section><!-- End Prize Section -->
 
     <!-- ======= Supporters Section ======= -->
-    <section id="supporters">
+    <section id="supporters"
+      class="section-with-bg">
       <div class="container"
         data-aos="fade-up">
         <div class="section-header">
@@ -750,8 +841,7 @@
     </section><!-- End Sponsors Section -->
 
     <!-- =======  F.A.Q Section ======= -->
-    <section id="faq"
-      class="section-with-bg">
+    <section id="faq">
       <div class="container"
         data-aos="fade-up">
 
@@ -917,181 +1007,59 @@
         </section>  --->
     <!-- End Subscribe Section -->
 
-    <!-- ======= Buy Ticket Section ======= -->
-    <!------
-        <section id="buy-tickets"
-          class="section-with-bg">
-          <div class="container"
-            data-aos="fade-up">
-
-            <div class="section-header">
-              <h2>Buy Tickets</h2>
-              <p>Velit consequatur consequatur inventore iste fugit unde omnis eum aut.</p>
-            </div>
-
-            <div class="row">
-              <div class="col-lg-4"
-                data-aos="fade-up"
-                data-aos-delay="100">
-                <div class="card mb-5 mb-lg-0">
-                  <div class="card-body">
-                    <h5 class="card-title text-muted text-uppercase text-center">Standard Access</h5>
-                    <h6 class="card-price text-center">$150</h6>
-                    <hr>
-                      <ul class="fa-ul">
-                        <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
-                        <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
-                        <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
-                        <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Community Access</li>
-                        <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
-                        <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
-                      </ul>
-                      <hr>
-                        <div class="text-center">
-                          <button type="button"
-                            class="btn"
-                            data-bs-toggle="modal"
-                            data-bs-target="#buy-ticket-modal"
-                            data-ticket-type="standard-access">Buy Now</button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="col-lg-4"
-                  data-aos="fade-up"
-                  data-aos-delay="200">
-                  <div class="card mb-5 mb-lg-0">
-                    <div class="card-body">
-                      <h5 class="card-title text-muted text-uppercase text-center">Pro Access</h5>
-                      <h6 class="card-price text-center">$250</h6>
-                      <hr>
-                        <ul class="fa-ul">
-                          <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
-                          <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
-                          <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
-                          <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
-                          <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
-                          <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
-                        </ul>
-                        <hr>
-                          <div class="text-center">
-                            <button type="button"
-                              class="btn"
-                              data-bs-toggle="modal"
-                              data-bs-target="#buy-ticket-modal"
-                              data-ticket-type="pro-access">Buy Now</button>
-                          </div>
-                        </div>
-                    </div>
-                  </div>
-
-
-                  <div class="col-lg-4"
-                    data-aos="fade-up"
-                    data-aos-delay="300">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title text-muted text-uppercase text-center">Premium Access</h5>
-                        <h6 class="card-price text-center">$350</h6>
-                        <hr>
-                          <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
-                            <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
-                            <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
-                            <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
-                            <li><span class="fa-li"><i class="fa fa-check"></i></span>Workshop Access</li>
-                            <li><span class="fa-li"><i class="fa fa-check"></i></span>After Party</li>
-                          </ul>
-                          <hr>
-                            <div class="text-center">
-                              <button type="button"
-                                class="btn"
-                                data-bs-toggle="modal"
-                                data-bs-target="#buy-ticket-modal"
-                                data-ticket-type="premium-access">Buy Now</button>
-                            </div>
-
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-
-
-                <div id="buy-ticket-modal"
-                  class="modal fade">
-                  <div class="modal-dialog"
-                    role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">Buy Tickets</h4>
-                        <button type="button"
-                          class="btn-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        <form method="POST"
-                          action="#">
-                          <div class="form-group">
-                            <input type="text"
-                              class="form-control"
-                              name="your-name"
-                              placeholder="Your Name">
-                          </div>
-                          <div class="form-group mt-3">
-                            <input type="text"
-                              class="form-control"
-                              name="your-email"
-                              placeholder="Your Email">
-                          </div>
-                          <div class="form-group mt-3">
-                            <select id="ticket-type"
-                              name="ticket-type"
-                              class="form-select">
-                              <option value="">-- Select Your Ticket Type --</option>
-                              <option value="standard-access">Standard Access</option>
-                              <option value="pro-access">Pro Access</option>
-                              <option value="premium-access">Premium Access</option>
-                            </select>
-                          </div>
-                          <div class="text-center mt-3">
-                            <button type="submit"
-                              class="btn">Buy Now</button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </section> --->
-    <!-- End Buy Ticket Section -->
-
     <!-- ======= Our Team Section ======= -->
-    <section id="ourTeam">
+    <section id="ourTeam"
+      class="team-section section-with-bg">
       <div class="container"
         data-aos="fade-up">
         <div class="section-header">
-          <h2>Our Team</h2>
+          <h2>Meet Our Team</h2>
           <p>Meet our awesome team members</p>
-        </div>
-        <div class="row"
-          id="team-members-container"></div>
-        <div class="load-more"
-          id="loadMoreBtn"
-          onclick="showMoreTeamMembers()">
-          <span>Show More</span>
-          <i class="bi bi-arrow-down"></i>
+          </div>
+        <div class="row">
+          <div class="col-lg-6 d-flex justify-content-center mb-3">
+            <img src="./assets/img/our-team.svg"
+              alt="Code Kshetra Team"
+              class="img-fluid"
+              style="max-width: 300px; height: auto;">
+          </div>
+          <div class="col-lg-6">
+            <div class="team-description">
+              <p>
+                Meet the backbone of CodeKshetra's hackathon event - our dedicated team of organizers and coordinators.
+                Committed to
+                fostering innovation and providing an enriching experience, this dynamic group of individuals plays a
+                pivotal
+                role in
+                bringing the hackathon vision to life. With a passion for technology and a knack for event management,
+                our team
+                ensures the success of CodeKshetra hackathon.
+              </p>
+              <p>
+                The organizers and coordinators meticulously plan and execute every aspect of the hackathon, from
+                conceptualization to
+                implementation. Their diverse skills, ranging from project management to communication, contribute to
+                the
+                seamless
+                orchestration of the event. Whether it's coordinating logistics, managing communication channels, or
+                troubleshooting
+                challenges, the CodeKshetra team works collaboratively to create an environment that encourages
+                creativity and
+                problem-solving.
+              </p>
+            </div>
+            <a href="our-team.html"
+              target="_blank"
+              class="btn mt-2">View Team</a>
+            </div>
         </div>
       </div>
     </section>
+
     <!-- End Our Team Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact"
+    <!-- <section id="contact"
       class="section-with-bg">
       <div class="container"
         data-aos="fade-up">
@@ -1116,7 +1084,7 @@
             <div class="contact-phone">
               <i class="bi bi-phone"></i>
               <h3>Phone Number</h3>
-              <p><a href="tel:+911234567890">+91 12345 67890</a></p>
+              <p><a href="tel:+918459309024">+91 12345 67890</a></p>
             </div>
           </div>
 
@@ -1124,14 +1092,15 @@
             <div class="contact-email">
               <i class="bi bi-envelope"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@codekshetra.com">info@codekshetra.com</a></p>
+              <p><a href="mailto:codekshetra.hackathon@gmail.com">codekshetra.hackathon@gmail.com</a></p>
             </div>
           </div>
 
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section> -->
+    <!-- End Contact Section -->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -1152,11 +1121,11 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#aboutCodeKshetra">About</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#gallery">Theme</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#schedule">Schedule</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#Prizes">Prizes</a></li>
             </ul>
           </div>
 
@@ -1164,23 +1133,36 @@
             <h4>Contact Us</h4>
             <p>
               3 Near Rithala Metro Station Rohini Sector 5, Institutional Area, New Delhi, Delhi 110085 <br>
-              <strong>Phone:</strong> +91 1234567890<br>
-              <strong>Email:</strong> info@codekshetra.com<br>
+              <strong>Phone:</strong> +91 8459309024<br>
+              <strong>Email:</strong> codekshetra.hackathon@gmail.com<br>
             </p>
 
             <div class="social-links">
               <a href="#"
-                class="twitter"><i class="bi bi-twitter"></i></a>
+                class="twitter"><i class="bi bi-twitter-x"></i></a>
               <a href="#"
                 class="facebook"><i class="bi bi-facebook"></i></a>
               <a href="#"
                 class="instagram"><i class="bi bi-instagram"></i></a>
               <a href="#"
-                class="google-plus"><i class="bi bi-instagram"></i></a>
-              <a href="#"
                 class="linkedin"><i class="bi bi-linkedin"></i></a>
             </div>
 
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Get Involved</h4>
+            <ul>
+              <li><a href="#"
+                  class="get-involved-btn"> Become a sponsor
+                </a></li>
+              <li><a href="#"
+                  class="get-involved-btn"> Become a mentor
+                </a></li>
+              <li><a href="#"
+                  class="get-involved-btn"> Become a coordinator
+                </a></li>
+            </ul>
           </div>
 
         </div>
@@ -1213,6 +1195,26 @@
     defer></script>
   <script src="assets/js/loader.js"
     defer></script>
+  <script>$(document).ready(function () {
+      $('.dataTable').DataTable({
+        "pageLength": 5,
+        "lengthMenu": [5, 10, 15],
+        "language": {
+          "lengthMenu": "Show _MENU_ entries per page",
+
+          "info": "Showing _START_ to _END_ of _TOTAL_ statements",
+          "infoEmpty": "Showing 0 to 0 of 0 entries",
+          "emptyTable": "Get ready! Problem Statements will be revealed one day before the event. Stay tuned!",
+          "zeroRecords": "No matching statemets found",
+          "search": "Search:",
+          "paginate": {
+            "first": "First",
+            "last": "Last",
+          }
+        }
+      });
+      showMoreJudges();
+    });</script>
 
 </body>
 

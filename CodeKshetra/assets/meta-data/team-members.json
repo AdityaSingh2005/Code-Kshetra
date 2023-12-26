@@ -1,34 +1,62 @@
 [
     {
+        "name": "Akshay Kr Sharma",
+        "role": "Coordinator",
+        "image": "",
+        "social": {
+            "insta": "",
+            "linkedin": ""
+        },
+        "category": "Web Dev"
+    },
+    {
+        "name": "Aditya Taneja",
+        "role": "Developer",
+        "image": "",
+        "category": "Web Dev",
+        "social": {
+            "insta": "",
+            "linkedin": ""
+        }
+    },
+    {
+        "name": "Aditya Pratap Singh",
+        "role": "Coordinator",
+        "image": "",
+        "category": "Web Dev",
+        "social": {
+            "insta": "",
+            "linkedin": ""
+        }
+    },
+    {
         "name": "Navneet Baid",
         "role": "Developer",
-        "image": "assets/img/speakers/1.jpg",
-        "insta": "insta",
-        "level": "Pro",
-        "linkedin": "linkedin"
+        "image": "assets/img/team/navneet_baid.png",
+        "category": "Web Dev",
+        "social": {
+            "insta": "navneet.baid",
+            "linkedin": "navneet-b-a418ab187"
+        }
     },
     {
-        "name": "Navneet Baid",
-        "role": "Designer",
-        "image": "assets/img/speakers/2.jpg",
-        "insta": "insta",
-        "level": "Pro",
-        "linkedin": "linkedin"
-    },
-    {
-        "name": "Navneet Baid",
+        "name": "Pritam Shil",
         "role": "Developer",
-        "image": "assets/img/speakers/3.jpg",
-        "insta": "insta",
-        "level": "Pro",
-        "linkedin": "linkedin"
+        "image": "assets/img/team/pritim_shil.jpg",
+        "category": "Web Dev",
+        "social": {
+            "insta": "its_pritam_shil03",
+            "linkedin": "pritam-shil-19178a274"
+        }
     },
     {
-        "name": "Navneet Baid",
-        "role": "Designer",
-        "image": "assets/img/speakers/4.jpg",
-        "insta": "insta",
-        "level": "Pro",
-        "linkedin": "linkedin"
+        "name": "Rupesh Sharma",
+        "role": "Developer",
+        "image": "",
+        "category": "Web Dev",
+        "social": {
+            "insta": "",
+            "linkedin": ""
+        }
     }
 ]

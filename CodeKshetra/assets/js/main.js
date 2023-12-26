@@ -225,5 +225,30 @@
       mirror: false
     })
   });
+  /**
+  * Hide the  Preloader
+  */
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".preloader").style.display = "none";
+  });
+  /**
+ * Navbar logo handling
+ */
+  document.addEventListener("DOMContentLoaded", function () {
+    var header = document.getElementById("header");
+    var logoText = document.getElementById("header-logo-link");
+    var logoImg = document.getElementById("header-logo-img");
 
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 0) {
+        header.classList.add("header-scrolled");
+        logoText.style.display = "block";
+        logoImg.style.display = "none";
+      } else {
+        header.classList.remove("header-scrolled");
+        logoText.style.display = "none";
+        logoImg.style.display = "block";
+      }
+    });
+  });
 })()
