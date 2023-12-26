@@ -7,6 +7,14 @@
 # General
 --------------------------------------------------------------*/
 body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+    body {
   background: #fff;
   color: #2f3138;
   font-family: "Open Sans", sans-serif;
@@ -49,15 +57,36 @@ h6 {
 }
 
 /* Prelaoder */
-#preloader {
+.preloader {
   position: fixed;
-  left: 0;
   top: 0;
-  z-index: 999;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: visible;
-  background: #fff url("../img/preloader.svg") no-repeat center center;
+  background-color: #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .loader {
+    border: 8px solid #0e1b4d;
+    border-top: 8px solid #A90377;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
 }
 
 /*--------------------------------------------------------------
@@ -168,6 +197,7 @@ h6 {
 #header #logo h1 a,
 #header #logo h1 a:hover {
   color: #fff;
+  transition: opacity 0.5s ease;
 }
 
 #header #logo img {
@@ -175,6 +205,7 @@ h6 {
   padding: 0;
   margin: 0;
   max-height: 50px !important;
+  transition: opacity 0.5s ease;
 }
 
 @media (max-width: 992px) {
@@ -293,7 +324,7 @@ h6 {
 .navbar .dropdown ul {
   display: block;
   position: absolute;
-  left: 12px;
+  left: -76px;
   top: calc(100% + 30px);
   margin: 0;
   padding: 10px 0;
@@ -657,31 +688,7 @@ h6 {
   color: #fff;
 }
 
-/* #hero .countdown-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  position: relative;
-}
-
-#hero .countdown-item {
-  text-align: center;
-  color: whitesmoke;
-  margin: 0 10px;
-  border-radius: 50%;
-  border: 3px solid #A90377;
-  padding: 0px 20px;
-  width: 80px;
-  height: 80px;
-}
-
-#hero .countdown-item span {
-  display: block;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-*/ .countdown {
+#hero .countdown {
   --number-color: hsl(0 0% 100%);
   --text-color: hsl(0, 0%, 69%);
   --dot-color: hsl(0, 0%, 33%);
@@ -879,10 +886,60 @@ h6 {
   color: #555;
 }
 /*--------------------------------------------------------------
+# Mentors Section --------------------------------------------------------------*/
+#mentors {
+  padding: 60px 0 30px 0;
+}
+
+#mentors .mentor-section {
+  padding: 80px 0;
+  text-align: left;
+}
+
+#mentors .mentor-description {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#mentors .btn {
+  background: rgba(6, 12, 34, 0.98);
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#ourTeam .btn:hover {
+  background: rgba(6, 12, 34, 0.85);
+}
+/*--------------------------------------------------------------
 # Our Team Section --------------------------------------------------------------*/ #ourTeam {
   padding: 60px 0 30px 0;
 }
 
+#ourTeam .team-section {
+  padding: 80px 0;
+  text-align: left;
+}
+
+#ourTeam .team-description {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#ourTeam .btn {
+  background: rgba(6, 12, 34, 0.98);
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#ourTeam .btn:hover {
+  background: rgba(6, 12, 34, 0.85);
+}
 #ourTeam-details .details h2 {
   color: #112363;
   font-size: 28px;
@@ -911,7 +968,6 @@ h6 {
   margin-bottom: 10px;
 }
 
-/* Content-1:Start */
 #ourTeam .box {
   width: 250px;
   height: fit-content;
@@ -929,20 +985,47 @@ h6 {
   margin: 15px 2px;
 }
 
-#ourTeam .image img {
+#ourTeam .image img,
+#ourTeam .image .initials {
+  position: relative;
   height: 120px;
   width: 120px;
-  border-radius: 35%;
+  border-radius: 30%;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5px;
+  overflow: hidden;
+  }
+  
+  #ourTeam .image img::after,
+  #ourTeam .image .initials::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 5px solid rgba(255, 255, 255, 0);
+    /* Transparent border */
+    border-radius: 2%;
+    /* Inherit border-radius from the parent */
+    pointer-events: fill;
+    box-sizing: border-box;
 }
 
+#ourTeam .image .initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: xx-large;
+}
 #ourTeam .level {
   font-size: 0.7em;
   background-color: rgb(164, 189, 183, 0.5);
-  width: 50px;
+  width: 100px;
   padding: 0px;
   border-radius: 5px;
   font-weight: bolder;
@@ -953,13 +1036,13 @@ h6 {
 }
 
 #ourTeam .name {
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: bolder;
   letter-spacing: 1px;
 }
 
 #ourTeam .job_title {
-  font-size: 0.65em;
+  font-size: 0.9em;
   font-weight: bolder;
   color: gray;
   margin-top: -2px;
@@ -1225,6 +1308,7 @@ h6 {
 .stay-tuned-button:hover {
   background: linear-gradient(45deg, #2980b9, #9b59b6);
 }
+
 /*--------------------------------------------------------------
 # Venue Section
 --------------------------------------------------------------*/
@@ -1297,6 +1381,45 @@ h6 {
   transform: scale(1.1);
 }
 
+/*--------------------------------------------------------------
+# Problem Statements Section
+--------------------------------------------------------------*/
+#problems .card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+#problems .card .body {
+  padding: 20px;
+}
+
+#problems .table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#problems .table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+#problems .table th {
+  background-color: #f2f2f2;
+}
+
+#problems .table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#problems .table tbody tr:hover {
+  background-color: #e6f7ff;
+}
 /*--------------------------------------------------------------
 # Prizes Section
 --------------------------------------------------------------*/
@@ -1434,19 +1557,8 @@ h6 {
   padding: 60px 0;
 }
 
-#supporters .section-header h2 {
-  color: #343a40;
-  /* Set text color */
-}
-
-#supporters .section-header p {
-  color: #6c757d;
-  /* Set text color */
-}
-
 #supporters .text-center {
   margin-top: 30px;
-  /* Add some top margin */
 }
 
 #supporters .text-center i {
@@ -1462,6 +1574,7 @@ h6 {
   color: #343a40;
   /* Set text color */
 }
+
 #supporters .supporters-wrap {
   border: 1px solid #e0e5fa;
   margin-bottom: 30px;
@@ -2009,4 +2122,23 @@ h6 {
   text-align: center;
   font-size: 13px;
   color: #ddd;
+}
+#footer .get-involved-btn {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  color: #fff;
+  animation-delay: 0.8s;
+  border: 2px solid #A90377;
+}
+
+#footer .get-involved-btn:hover {
+  background: #A90377;
+  color: #fff !important;
 }

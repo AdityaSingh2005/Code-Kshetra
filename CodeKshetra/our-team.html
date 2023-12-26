@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0"
+        name="viewport">
+
+    <title>Code क्षेत्र : : Team</title>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Code क्षेत्र: The Ultimate 36-Hour Hackathon in February 2024 at JIMS Rohini Sector-5. Dive into coding challenges, showcase your skills, and win exciting swags and prizes.">
+    <meta name="keywords"
+        content="CodeKshetra, hackathon, coding, innovation, JIMS Rohini, tech event, February 2024">
+    <meta name="author"
+        content="geekroom_jims">
+
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title"
+        content="Code क्षेत्र : : Team">
+    <meta property="og:description"
+        content="Dive into coding challenges, showcase your skills, and win exciting swags and prizes.">
+    <meta property="og:image"
+        content="assets/img/logo.png">
+    <meta property="og:url"
+        content="https://codekshetra.vercel.app/">
+    <meta property="og:type"
+        content="website">
+
+    <!-- Twitter Meta Tags (for Twitter Card) -->
+    <meta name="twitter:card"
+        content="summary_large_image">
+    <meta name="twitter:title"
+        content="Code क्षेत्र : : Team">
+    <meta name="twitter:description"
+        content="Dive into coding challenges, showcase your skills, and win exciting swags and prizes.">
+    <meta name="twitter:image"
+        content="https://codekshetra.vercel.app/assets/img/logo.png">
+
+    <!-- Favicons -->
+    <link href="https://codekshetra.vercel.app/assets/img/logo.png"
+        rel="icon">
+    <link href="https://codekshetra.vercel.app/assets/img/logo.png"
+        rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css"
+        rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+        rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css"
+        rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css"
+        rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css"
+        rel="stylesheet">
+    <script type="text/javascript"
+        charset="utf8"
+        src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #header {
+            height: 90px;
+            position: fixed;
+            left: 0;
+            background: rgba(6, 12, 34, 0.98);
+            height: 70px;
+            top: 0;
+            right: 0;
+            transition: all 0.5s;
+            z-index: 997;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- ======= Header ======= -->
+    <header id="header"
+        class="d-flex align-items-center ">
+        <div class="container-fluid container-xxl d-flex align-items-center">
+
+            <div id="logo"
+                class="me-auto">
+                <h1><img src="./assets/img/logo.png"
+                        alt="Code Kshetra"
+                        id="header-logo-img"
+                        class="img-fluid">
+                    <a href="./"
+                        id="header-logo-link"
+                        style="display: none;">
+                        Code<span>क्षेत्र</span>
+                    </a>
+                </h1>
+            </div>
+
+
+            <nav id="navbar"
+                class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto"
+                            href="./">Home</a></li>
+                    <li><a class="nav-link scrollto"
+                            href="./mentors.html">Mentors</a></li>
+                    <li class="dropdown">
+                        <a href="#"><span>Get Involved</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">Become a Sponsor</a></li>
+                            <li><a href="#">Become a Mentor</a></li>
+                            <li><a href="#">Become a Coordinator</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main"
+        class="mt-5">
+        <!-- ======= Our Team Section ======= -->
+        <section id="ourTeam"
+            class="section-with-bg">
+            <div class="container"
+                data-aos="fade-up">
+                <div class="section-header">
+                    <h2>Our Team</h2>
+                    <p>Meet our awesome team members</p>
+                </div>
+                <div class="row"
+                    id="team-members-container"></div>
+                <div class="load-more"
+                    id="loadMoreBtn"
+                    onclick="showMoreTeamMembers()">
+                    <span>Show More</span>
+                    <i class="bi bi-arrow-down"></i>
+                </div>
+            </div>
+        </section>
+        <!-- End Our Team Section -->
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-info">
+                        <img src="assets/img/logo.png"
+                            alt="TheEvenet">
+                        <p>Empowering tech enthusiasts, CodeKshetra fosters creativity and learning in the world of
+                            coding. Join us
+                            in the
+                            pursuit of innovation and knowledge.</p>
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contact Us</h4>
+                        <p>
+                            3 Near Rithala Metro Station Rohini Sector 5, Institutional Area, New Delhi, Delhi 110085
+                            <br>
+                            <strong>Phone:</strong> +91 1234567890<br>
+                            <strong>Email:</strong> info@codekshetra.com<br>
+                        </p>
+
+                        <div class="social-links">
+                            <a href="#"
+                                class="twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="#"
+                                class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#"
+                                class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#"
+                                class="google-plus"><i class="bi bi-instagram"></i></a>
+                            <a href="#"
+                                class="linkedin"><i class="bi bi-linkedin"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer><!-- End  Footer -->
+
+    <a href="#"
+        class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"
+        defer></script>
+    <script src="assets/js/loader.js"></script>
+    <script>
+        showMoreTeamMembers();
+    </script>
+</body>
+
+</html>
