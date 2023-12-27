@@ -1,11 +1,11 @@
 [
     {
-        "name": "Akshay Kr Sharma",
+        "name": "Akshay Kumar Sharma",
         "role": "Coordinator",
-        "image": "",
+        "image": "assets/img/team/akshay_sharma.jpg",
         "social": {
-            "insta": "",
-            "linkedin": ""
+            "insta": "akshay._95",
+            "linkedin": "akshay-kumar-sharma-devvoyager"
         },
         "category": "Web Dev"
     },
@@ -20,13 +20,13 @@
         }
     },
     {
-        "name": "Aditya Pratap Singh",
+        "name": "Aditya Singh",
         "role": "Coordinator",
-        "image": "",
+        "image": "assets/img/team/aditya_pratap_singh.jpg",
         "category": "Web Dev",
         "social": {
-            "insta": "",
-            "linkedin": ""
+            "insta": "_singh_adiitya",
+            "linkedin": "aditya-singh-a04721208"
         }
     },
     {
@@ -57,6 +57,16 @@
         "social": {
             "insta": "",
             "linkedin": ""
+        }
+    },
+    {
+        "name": "Tanmay Arora",
+        "role": "Coordinator",
+        "image": "assets/img/team/tanmay_arora.jpg",
+        "category": "Web Dev",
+        "social": {
+            "insta": "tanmay_exe",
+            "linkedin": "tanmaycode1"
         }
     }
 ]

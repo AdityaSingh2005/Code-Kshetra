@@ -16,13 +16,15 @@
 ## team-members.json format
 ```json
    [ {
-    "name": "Navneet Baid",
-    "role": "Developer",
-    "image": "assets/img/members/1.jpg",
-    "insta": "insta",
-    "level": "Pro",
-    "linkedin": "linkedin"
-}]
+        "name": "Navneet Baid",
+        "role": "Developer",
+        "image": "assets/img/team/navneet_baid.png",
+        "category": "Web Dev",
+        "social": {
+            "insta": "navneet.baid",
+            "linkedin": "navneet-b-a418ab187"
+        }
+    }]
 ```
 
 ## mentors.json fotmat
