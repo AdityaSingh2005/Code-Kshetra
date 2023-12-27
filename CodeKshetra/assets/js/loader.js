@@ -59,6 +59,22 @@ function showMoreTeamMembers() {
     }
 }
 function renderMembers(start, end) {
+    // Sort by category
+    teamData.sort((a, b) => a.category.localeCompare(b.category));
+    // Sort by role within each category
+    teamData.sort((a, b) => {
+        if (a.category === b.category) {
+            return a.role.localeCompare(b.role);
+        }
+        return 0;
+    });
+    // Sort by name within each category and role
+    teamData.sort((a, b) => {
+        if (a.category === b.category && a.role === b.role) {
+            return a.name.localeCompare(b.name);
+        }
+        return 0;
+    });
     teamData.slice(start, end).forEach((member, index) => {
         const col = document.createElement('div');
         col.classList.add('col-lg-3', 'col-md-4', 'd-flex', 'justify-content-center');
@@ -148,9 +164,10 @@ function renderMembers(start, end) {
 
         col.appendChild(memberCard);
         teamContainer.appendChild(col);
-        GLightbox({
-            selector: '[data-glightbox]',
-        });
+       
+    });
+    GLightbox({
+        selector: '[data-glightbox]',
     });
 }
 function showMoreJudges() {
