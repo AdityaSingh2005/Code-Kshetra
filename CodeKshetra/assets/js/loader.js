@@ -74,6 +74,7 @@ function renderMembers(start, end) {
         const image = document.createElement('div');
         image.classList.add('image');
         const imgElement = document.createElement('img');
+        imgElement.style.cursor = 'pointer';
 
         // Check if the member's image is blank
         if (member.image.trim() === '') {
@@ -88,8 +89,13 @@ function renderMembers(start, end) {
             image.appendChild(initials);
         } else {
             // Display the member's image
+
             imgElement.src = member.image;
             imgElement.alt = `${member.name} - Team Member`;
+            imgElement.setAttribute('data-glightbox', '');
+            // Add custom data attributes for member details
+            imgElement.setAttribute('data-title', member.name);
+            imgElement.setAttribute('data-description', `${member.category}- ${member.role}`);
             image.appendChild(imgElement);
         }
 
@@ -142,6 +148,9 @@ function renderMembers(start, end) {
 
         col.appendChild(memberCard);
         teamContainer.appendChild(col);
+        GLightbox({
+            selector: '[data-glightbox]',
+        });
     });
 }
 function showMoreJudges() {
@@ -231,7 +240,6 @@ function showMoreMentors() {
         loadMoreMentorsBtn.style.display = 'none';
     }
 }
-
 function renderMentors(start, end) {
     mentorsData.slice(start, end).forEach((mentor, index) => {
         const col = document.createElement('div');

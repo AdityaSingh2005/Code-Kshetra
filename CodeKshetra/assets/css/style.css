@@ -6,6 +6,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -14,7 +15,8 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-    body {
+
+body {
   background: #fff;
   color: #2f3138;
   font-family: "Open Sans", sans-serif;
@@ -64,7 +66,7 @@ h6 {
   width: 100%;
   height: 100%;
   background-color: #ffffff00;
-    display: flex;
+  display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
@@ -885,10 +887,11 @@ h6 {
 .load-more:hover {
   color: #555;
 }
+
 /*--------------------------------------------------------------
 # Mentors Section --------------------------------------------------------------*/
 #mentors {
-  padding: 60px 0 30px 0;
+  padding: 60px 5px;
 }
 
 #mentors .mentor-section {
@@ -913,9 +916,10 @@ h6 {
 #ourTeam .btn:hover {
   background: rgba(6, 12, 34, 0.85);
 }
+
 /*--------------------------------------------------------------
 # Our Team Section --------------------------------------------------------------*/ #ourTeam {
-  padding: 60px 0 30px 0;
+  padding: 60px 5px;
 }
 
 #ourTeam .team-section {
@@ -940,41 +944,33 @@ h6 {
 #ourTeam .btn:hover {
   background: rgba(6, 12, 34, 0.85);
 }
-#ourTeam-details .details h2 {
+/* General Styles */
+#ourTeam .box,
+#ourTeam-details .details h2,
+#ourTeam-details .details p,
+#ourTeam-details .social a {
   color: #112363;
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 10px;
 }
 
-#ourTeam-details .details .social {
-  margin-bottom: 15px;
-}
-
-
-#ourTeam-details .social a:hover {
-  background: #A90377;
-  color: #fff;
-}
-
-#ourTeam-details .social a i {
-  font-size: 16px;
-  line-height: 0;
-}
-
+#ourTeam .box,
+#ourTeam-details .details h2,
 #ourTeam-details .details p {
-  color: #112363;
-  font-size: 15px;
-  margin-bottom: 10px;
+  transition: background 0.3s ease;
 }
 
+/* Team Box Styles */
 #ourTeam .box {
   width: 250px;
-  height: fit-content;
-  border-radius: 20px;
   padding: 10px;
   text-align: center;
   background: #ededed;
+  border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+  }
+  
+  #ourTeam .box:hover {
+    background: #d9d9d9;
 }
 
 #ourTeam .box1 {
@@ -992,59 +988,37 @@ h6 {
   width: 120px;
   border-radius: 30%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5px;
+  margin: 0 auto 5px;
   overflow: hidden;
-  }
-  
-  #ourTeam .image img::after,
-  #ourTeam .image .initials::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 5px solid rgba(255, 255, 255, 0);
-    /* Transparent border */
-    border-radius: 2%;
-    /* Inherit border-radius from the parent */
-    pointer-events: fill;
+}
+
+#ourTeam .image img::after,
+#ourTeam .image .initials::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 5px solid rgba(255, 255, 255, 0);
+  border-radius: 2%;
+  pointer-events: fill;
     box-sizing: border-box;
 }
 
-#ourTeam .image .initials {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: whitesmoke;
-  font-weight: bold;
-  font-size: xx-large;
-}
+/* Font Styles */
+#ourTeam .name,
+#ourTeam .job_title,
+#ourTeam .job_discription,
+#ourTeam .image .initials,
 #ourTeam .level {
-  font-size: 0.7em;
-  background-color: rgb(164, 189, 183, 0.5);
-  width: 100px;
-  padding: 0px;
-  border-radius: 5px;
   font-weight: bolder;
-  margin-top: 10px !important;
-  letter-spacing: 1px;
-  display: block;
-  margin: 0px auto 0px;
-}
-
-#ourTeam .name {
-  font-size: 1em;
-  font-weight: bolder;
-  letter-spacing: 1px;
+  font-family: "Nunito", sans-serif;
 }
 
 #ourTeam .job_title {
   font-size: 0.9em;
-  font-weight: bolder;
-  color: gray;
+  color: #2b2b2b;
   margin-top: -2px;
 }
 
@@ -1053,9 +1027,29 @@ h6 {
   color: gray;
   margin: 10px 30px 20px;
 }
+#ourTeam .image .initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+#ourTeam .level {
+  font-size: 0.7em;
+  background-color: rgba(164, 189, 183, 0.5);
+  width: 100px;
+  padding: 0;
+  border-radius: 5px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  display: block;
+  margin: 10px auto;
+}
 
 #ourTeam .icons {
-  margin: 0px 30px;
+  margin: 0 30px;
   font-size: 1.5em;
   display: flex;
   margin-top: 10px;
@@ -1070,16 +1064,40 @@ h6 {
 }
 
 #ourTeam p {
-  padding: 0 0 0 0;
-  margin: 0 0 2px 0;
+  margin: 0 0 2px;
+  }
+  
+  /* Team Details Styles */
+  #ourTeam-details .details h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  #ourTeam-details .details .social {
+    margin-bottom: 15px;
+  }
+  
+  #ourTeam-details .social a:hover {
+    background: #a90377;
+    color: #fff;
+  }
+  
+  #ourTeam-details .social a i {
+    font-size: 16px;
+    line-height: 0;
 }
 
+#ourTeam-details .details p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
 /* Content-1:End */
 /*--------------------------------------------------------------
 # judges Section
 --------------------------------------------------------------*/
 #judges {
-  padding: 60px 0 30px 0;
+  padding: 60px 10px;
 }
 
 #judges .judge {
@@ -1420,16 +1438,15 @@ h6 {
 #problems .table tbody tr:hover {
   background-color: #e6f7ff;
 }
+
 /*--------------------------------------------------------------
 # Prizes Section
 --------------------------------------------------------------*/
 #Prizes {
   padding: 60px 0;
-
 }
 
 #row {
-  padding: 60px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1496,7 +1513,7 @@ h6 {
 @media (max-width: 768px) {
 
   #row .prize {
-    width: 70%;
+    width: 80%;
     margin-left: 0;
   }
 
@@ -1510,7 +1527,7 @@ h6 {
 # Gallery Section
 --------------------------------------------------------------*/
 #gallery {
-  padding: 60px;
+  padding: 60px 5px;
   overflow: hidden;
 }
 
@@ -1554,7 +1571,7 @@ h6 {
 # Sponsors Section
 --------------------------------------------------------------*/
 #supporters {
-  padding: 60px 0;
+  padding: 60px 5px;
 }
 
 #supporters .text-center {
@@ -1609,7 +1626,7 @@ h6 {
 # F.A.Q Section
 --------------------------------------------------------------*/
 #faq {
-  padding: 60px 0;
+  padding: 60px 5px;
 }
 
 #faq .faq-list {
@@ -2123,6 +2140,7 @@ h6 {
   font-size: 13px;
   color: #ddd;
 }
+
 #footer .get-involved-btn {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
