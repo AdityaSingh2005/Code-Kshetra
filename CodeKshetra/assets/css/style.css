@@ -1474,6 +1474,31 @@ h6 {
 
 }
 
+#row .awarad{
+  border: 1px solid #e0e5fa;
+  border-radius: 1rem;
+  background-color: #13032af7;
+  margin-bottom: 3rem;
+  width: 100%;
+  margin-left: 3rem;
+}
+
+#row .awarad-img{
+  overflow: hidden;
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 5px;
+}
+
+#row .awarad:hover {
+  transform: scale(1.1);
+}
+
+#row .awarad {
+  transition: 0.3s ease-in-out;
+
+}
+
 #row .prize {
   transition: 0.3s ease-in-out;
 
@@ -1514,6 +1539,11 @@ h6 {
 
   #row .prize {
     width: 80%;
+    margin-left: 0;
+  }
+
+  #row .awarad{
+    width: 50%;
     margin-left: 0;
   }
 
