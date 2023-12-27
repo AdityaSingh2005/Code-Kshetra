@@ -1331,9 +1331,8 @@ h6 {
 # Venue Section
 --------------------------------------------------------------*/
 #venue {
-  padding: 60px 0;
+  padding: 60px;
 }
-
 #venue .container-fluid {
   margin-bottom: 3px;
 }
@@ -1381,23 +1380,6 @@ h6 {
   line-height: 1.6;
 }
 
-#venue .venue-gallery-container {
-  padding-right: 12px;
-}
-
-#venue .venue-gallery {
-  overflow: hidden;
-  border: 3px solid #fff;
-  border-radius: 8px;
-}
-
-#venue .venue-gallery img {
-  transition: transform ease-in-out 0.4s;
-}
-
-#venue .venue-gallery:hover img {
-  transform: scale(1.1);
-}
 
 /*--------------------------------------------------------------
 # Problem Statements Section
