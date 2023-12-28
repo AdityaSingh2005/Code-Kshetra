@@ -226,8 +226,8 @@ function renderTeamMembersByCategory() {
         headerH2.textContent = `${category} Team`;
 
         const headerP = document.createElement('p');
-        if (category == "Lead Organizers") {
-            headerP.textContent = `Meet our ${category}`;
+        if (category == "Lead Organizer") {
+            headerP.textContent = `Meet our Lead Organizers`;
         } else {
             headerP.textContent = `Meet our ${category} team members`;
         }
