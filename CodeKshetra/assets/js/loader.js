@@ -1,9 +1,4 @@
 
-const teamContainer = document.getElementById('team-members-container');
-const loadMoreBtn = document.getElementById('loadMoreBtn');
-const membersPerLoad = 18;
-let currentMembers = 0;
-let teamData = null;
 const judgesContainer = document.getElementById('judges-container');
 const loadMoreJudgeBtn = document.getElementById('loadMoreJudgeBtn');
 const judgesPerLoad = 4;
@@ -15,12 +10,7 @@ const mentorsPerLoad = 12;
 let currentMentors = 0;
 let mentorsData = null;
 
-async function fetchTeamData() {
-    const response = await fetch('assets/meta-data/team-members.json');
-    const data = await response.json();
-    teamData = data;
-    return data;
-}
+
 async function fetchJudgesData() {
     const response = await fetch('assets/meta-data/judges.json');
     const data = await response.json();
@@ -40,136 +30,6 @@ async function fetchMentorsData() {
     }
 }
 
-function showMoreTeamMembers() {
-    if (!teamData) {
-        fetchTeamData().then(() => showMoreTeamMembers());
-        return;
-    }
-    if (teamData.length === 0) {
-        teamContainer.innerHTML = '<span class="stay-tuned-button text-center">We are currently building our great team. Stay tuned for updates!</span>';
-        loadMoreBtn.style.display = 'none';
-        return;
-    }
-    const remainingMembers = teamData.length - currentMembers;
-    const nextLoad = Math.min(remainingMembers, membersPerLoad);
-    renderMembers(currentMembers, currentMembers + nextLoad);
-    currentMembers += nextLoad;
-    if (currentMembers >= teamData.length) {
-        loadMoreBtn.style.display = 'none';
-    }
-}
-function renderMembers(start, end) {
-    // Sort by category
-    teamData.sort((a, b) => a.category.localeCompare(b.category));
-    // Sort by role within each category
-    teamData.sort((a, b) => {
-        if (a.category === b.category) {
-            return a.role.localeCompare(b.role);
-        }
-        return 0;
-    });
-    // Sort by name within each category and role
-    teamData.sort((a, b) => {
-        if (a.category === b.category && a.role === b.role) {
-            return a.name.localeCompare(b.name);
-        }
-        return 0;
-    });
-    teamData.slice(start, end).forEach((member, index) => {
-        const col = document.createElement('div');
-        col.classList.add('col-lg-3', 'col-md-4', 'd-flex', 'justify-content-center');
-
-        const memberCard = document.createElement('div');
-        memberCard.classList.add('box1', 'box');
-        memberCard.setAttribute('data-aos', 'fade-up');
-        memberCard.setAttribute('data-aos-delay', `${index * 100}`);
-
-        const content = document.createElement('div');
-        content.classList.add('content');
-
-        const image = document.createElement('div');
-        image.classList.add('image');
-        const imgElement = document.createElement('img');
-        imgElement.style.cursor = 'pointer';
-
-        // Check if the member's image is blank
-        if (member.image.trim() === '') {
-            // Display initials with a random background
-            const initials = document.createElement('div');
-            initials.classList.add('initials');
-            const nameParts = member.name.trim().split(' ');
-            const firstInitial = nameParts[0][0];
-            const lastInitial = nameParts[nameParts.length - 1][0];
-            initials.textContent = (firstInitial + lastInitial).toUpperCase();
-            initials.style.backgroundColor = getRandomColor();
-            image.appendChild(initials);
-        } else {
-            // Display the member's image
-
-            imgElement.src = member.image;
-            imgElement.alt = `${member.name} - Team Member`;
-            imgElement.setAttribute('data-glightbox', '');
-            // Add custom data attributes for member details
-            imgElement.setAttribute('data-title', member.name);
-            imgElement.setAttribute('data-description', `${member.category}- ${member.role}`);
-            image.appendChild(imgElement);
-        }
-
-        const level = document.createElement('div');
-        level.classList.add('level');
-        const levelText = document.createElement('p');
-        levelText.textContent = member.category;
-        level.appendChild(levelText);
-
-        const text = document.createElement('div');
-        text.classList.add('text');
-        const name = document.createElement('p');
-        name.classList.add('name');
-        name.textContent = member.name;
-        const jobTitle = document.createElement('p');
-        jobTitle.classList.add('job_title');
-        jobTitle.textContent = member.role;
-        text.appendChild(name);
-        text.appendChild(jobTitle);
-        const icons = document.createElement('div');
-        icons.classList.add('icons');
-
-        if (member.social.insta && member.social.insta.trim() !== '') {
-            const instagramButton = document.createElement('a');
-            instagramButton.href = `https://www.instagram.com/${member.social.insta}`;
-            instagramButton.target = '_blank';
-            instagramButton.innerHTML = '<i class="bi bi-instagram"></i>';
-            icons.appendChild(instagramButton);
-        }
-
-        if (member.social.linkedin && member.social.linkedin.trim() !== '') {
-            const linkedinButton = document.createElement('a');
-            linkedinButton.href = `https://www.linkedin.com/in/${member.social.linkedin}`;
-            linkedinButton.target = '_blank';
-            linkedinButton.innerHTML = '<i class="bi bi-linkedin"></i>';
-            icons.appendChild(linkedinButton);
-        }
-
-        // Add icons container to the content
-        content.appendChild(icons);
-
-
-
-        content.appendChild(image);
-        content.appendChild(level);
-        content.appendChild(text);
-        content.appendChild(icons);
-
-        memberCard.appendChild(content);
-
-        col.appendChild(memberCard);
-        teamContainer.appendChild(col);
-       
-    });
-    GLightbox({
-        selector: '[data-glightbox]',
-    });
-}
 function showMoreJudges() {
     if (!judgesData) {
         fetchJudgesData().then(() => showMoreJudges());
@@ -303,8 +163,6 @@ function renderMentors(start, end) {
         mentorsContainer.appendChild(col);
     });
 }
-
-
 function createSocialLink(platform, url) {
     const link = document.createElement('a');
     link.href = url;
@@ -312,7 +170,6 @@ function createSocialLink(platform, url) {
     link.innerHTML = `<i class="bi bi-${platform.toLowerCase()}"></i>`;
     return link;
 }
-
 function getRandomColor() {
     const colors = [
         '#3498db', // Blue
@@ -332,3 +189,170 @@ function getRandomColor() {
     return colors[randomIndex];
 }
 
+// Team Members
+let teamData = null;
+async function fetchTeamData() {
+    const response = await fetch('assets/meta-data/team-members.json');
+    const data = await response.json();
+    teamData = data;
+    return data;
+}
+function showMoreTeamMembers() {
+    if (!teamData) {
+        fetchTeamData().then(() => showMoreTeamMembers());
+        return;
+    }
+    if (teamData.length === 0) {
+        teamContainer.innerHTML = '<span class="stay-tuned-button text-center">We are currently building our great team. Stay tuned for updates!</span>';
+        return;
+    }
+    renderTeamMembersByCategory();
+}
+function renderTeamMembersByCategory() {
+    const categories = [...new Set(teamData.map(member => member.category))];
+    categories.forEach(category => {
+        const section = document.createElement('section');
+        section.id = `${category}Team`;
+        section.classList.add('section-with-bg', 'mt-5');
+
+        const container = document.createElement('div');
+        container.classList.add('container');
+        container.setAttribute('data-aos', 'fade-up');
+
+        const sectionHeader = document.createElement('div');
+        sectionHeader.classList.add('section-header');
+
+        const headerH2 = document.createElement('h2');
+        headerH2.textContent = `${category} Team`;
+
+        const headerP = document.createElement('p');
+        if (category == "Lead Organizers") {
+            headerP.textContent = `Meet our ${category}`;
+        } else {
+            headerP.textContent = `Meet our ${category} team members`;
+        }
+
+        sectionHeader.appendChild(headerH2);
+        sectionHeader.appendChild(headerP);
+
+        const row = document.createElement('div');
+        row.classList.add('row');
+        row.id = `${category.toLowerCase()}-team-members-container`;
+
+        container.appendChild(sectionHeader);
+        container.appendChild(row);
+        section.appendChild(container);
+
+        document.getElementById('ourTeam').appendChild(section);
+
+        renderTeamMembers(category);
+    });
+}
+function renderTeamMembers(category) {
+    const teamContainer = document.getElementById(`${category.toLowerCase()}-team-members-container`);
+
+    teamData.forEach((member, index) => {
+        if (member.category === category) {
+
+            const col = document.createElement('div');
+            col.classList.add('col-lg-3', 'col-md-4', 'd-flex', 'justify-content-center');
+
+            const memberCard = document.createElement('div');
+            memberCard.classList.add('box1', 'box');
+            memberCard.setAttribute('data-aos', 'fade-up');
+            memberCard.setAttribute('data-aos-delay', `${index * 100}`);
+
+            const content = document.createElement('div');
+            content.classList.add('content');
+
+            const image = document.createElement('div');
+            image.classList.add('image');
+            const imgElement = document.createElement('img');
+            imgElement.style.cursor = 'pointer';
+
+            // Check if the member's image is blank
+            if (member.image.trim() === '') {
+                // Display initials with a random background
+                const initials = document.createElement('div');
+                initials.classList.add('initials');
+                const nameParts = member.name.trim().split(' ');
+                const firstInitial = nameParts[0][0];
+                const lastInitial = nameParts[nameParts.length - 1][0];
+                initials.textContent = (firstInitial + lastInitial).toUpperCase();
+                initials.style.backgroundColor = getRandomColor();
+                image.appendChild(initials);
+            } else {
+                // Display the member's image
+
+                imgElement.src = member.image;
+                imgElement.alt = `${member.name} - Team Member`;
+                imgElement.setAttribute('data-glightbox', '');
+                // Add custom data attributes for member details
+                imgElement.setAttribute('data-title', member.name);
+                imgElement.setAttribute('data-description', `${member.category}- ${member.role}`);
+                image.appendChild(imgElement);
+            }
+
+            const level = document.createElement('div');
+            level.classList.add('level');
+            const levelText = document.createElement('p');
+            levelText.textContent = member.category;
+            level.appendChild(levelText);
+
+            const text = document.createElement('div');
+            text.classList.add('text');
+            const name = document.createElement('p');
+            name.classList.add('name');
+            name.textContent = member.name;
+            const jobTitle = document.createElement('p');
+            jobTitle.classList.add('job_title');
+            jobTitle.textContent = member.role;
+            text.appendChild(name);
+            text.appendChild(jobTitle);
+            const icons = document.createElement('div');
+            icons.classList.add('icons');
+
+            if (member.social.insta && member.social.insta.trim() !== '') {
+                const instagramButton = document.createElement('a');
+                instagramButton.href = `https://www.instagram.com/${member.social.insta}`;
+                instagramButton.target = '_blank';
+                instagramButton.innerHTML = '<i class="bi bi-instagram"></i>';
+                icons.appendChild(instagramButton);
+            }
+
+            if (member.social.linkedin && member.social.linkedin.trim() !== '') {
+                const linkedinButton = document.createElement('a');
+                linkedinButton.href = `https://www.linkedin.com/in/${member.social.linkedin}`;
+                linkedinButton.target = '_blank';
+                linkedinButton.innerHTML = '<i class="bi bi-linkedin"></i>';
+                icons.appendChild(linkedinButton);
+            }
+
+            if (member.social.email && member.social.email.trim() !== '') {
+                const emailButton = document.createElement('a');
+                emailButton.href = `mailto:${member.social.email}`;
+                emailButton.target = '_blank';
+                emailButton.innerHTML = '<i class="bi bi-envelope"></i>';
+                icons.appendChild(emailButton);
+            }
+
+            // Add icons container to the content
+            content.appendChild(icons);
+
+
+
+            content.appendChild(image);
+            content.appendChild(level);
+            content.appendChild(text);
+            content.appendChild(icons);
+
+            memberCard.appendChild(content);
+
+            col.appendChild(memberCard);
+            teamContainer.appendChild(col);
+        }
+    });
+    GLightbox({
+        selector: '[data-glightbox]',
+    });
+}
