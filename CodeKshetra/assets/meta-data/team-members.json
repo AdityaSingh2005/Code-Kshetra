@@ -1,7 +1,48 @@
 [
     {
+        "name": "Purvesh Gupta",
+        "role": "Leader",
+        "image": "assets/img/team/purvesh_gupta.jpg",
+        "social": {
+            "insta": "purvesh__gupta",
+            "linkedin": "purvesh-gupta-736b95256",
+            "email": "purveshgupta19@gmail.com"
+        },
+        "category": "Lead Organizers"
+    },
+    {
+        "name": "Pratham Batra",
+        "role": "Leader",
+        "image": "assets/img/team/pratham_batra.jpg",
+        "social": {
+            "insta": "prath4m1908",
+            "linkedin": "pratham1908"
+        },
+        "category": "Lead Organizers"
+    },
+    {
+        "name": "Manas Chopra",
+        "role": "Leader",
+        "image": "assets/img/team/manas_chopra.jpg",
+        "social": {
+            "insta": "themanas.ai",
+            "linkedin": "themanas95826"
+        },
+        "category": "Lead Organizers"
+    },
+    {
+        "name": "Arnav Gupta",
+        "role": "Leader",
+        "image": "assets/img/team/arnav_gupta.jpg",
+        "social": {
+            "insta": "arnav_gupta.16",
+            "linkedin": "arnav-gupta-437a66256"
+        },
+        "category": "Lead Organizers"
+    },
+    {
         "name": "Akshay Kumar Sharma",
-        "role": "Coordinator",
+        "role": "Leader",
         "image": "assets/img/team/akshay_sharma.jpg",
         "social": {
             "insta": "akshay._95",
@@ -10,18 +51,8 @@
         "category": "Web Dev"
     },
     {
-        "name": "Aditya Taneja",
-        "role": "Developer",
-        "image": "",
-        "category": "Web Dev",
-        "social": {
-            "insta": "",
-            "linkedin": ""
-        }
-    },
-    {
         "name": "Aditya Singh",
-        "role": "Coordinator",
+        "role": "Leader",
         "image": "assets/img/team/aditya_pratap_singh.jpg",
         "category": "Web Dev",
         "social": {
@@ -30,8 +61,28 @@
         }
     },
     {
+        "name": "Tanmay Arora",
+        "role": "Leader",
+        "image": "assets/img/team/tanmay_arora.jpg",
+        "category": "Web Dev",
+        "social": {
+            "insta": "tanmay_exe",
+            "linkedin": "tanmaycode1"
+        }
+    },
+    {
+        "name": "Aditya Taneja",
+        "role": "Member",
+        "image": "",
+        "category": "Web Dev",
+        "social": {
+            "insta": "",
+            "linkedin": ""
+        }
+    },
+    {
         "name": "Navneet Baid",
-        "role": "Developer",
+        "role": "Member",
         "image": "assets/img/team/navneet_baid.png",
         "category": "Web Dev",
         "social": {
@@ -41,7 +92,7 @@
     },
     {
         "name": "Pritam Shil",
-        "role": "Developer",
+        "role": "Member",
         "image": "assets/img/team/pritim_shil.jpg",
         "category": "Web Dev",
         "social": {
@@ -51,22 +102,12 @@
     },
     {
         "name": "Rupesh Sharma",
-        "role": "Developer",
+        "role": "Member",
         "image": "assets/img/team/rupesd_sharma.jpeg",
         "category": "Web Dev",
         "social": {
             "insta": "r_u_r_sharma",
             "linkedin": "rupesh-sharma-a22905211"
-        }
-    },
-    {
-        "name": "Tanmay Arora",
-        "role": "Coordinator",
-        "image": "assets/img/team/tanmay_arora.jpg",
-        "category": "Web Dev",
-        "social": {
-            "insta": "tanmay_exe",
-            "linkedin": "tanmaycode1"
         }
     }
 ]
