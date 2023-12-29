@@ -1679,9 +1679,17 @@ h6 {
 
 }
 
+#row h4 {
+  font-weight: 1000;
+  font-size:small;
+  margin-bottom: 5px;
+  padding: 0 20px;
+  color: white;
+}
+
 #row h3 {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 5px;
   padding: 0 20px;
   color: white;
