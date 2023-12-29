@@ -204,11 +204,18 @@ h6 {
 }
 
 #header #logo img {
-  filter: grayscale(100%) invert(100%) brightness(100%);
   padding: 0;
   margin: 0;
   max-height: 50px !important;
   transition: opacity 0.5s ease;
+}
+
+#header #header-logo-img1 {
+  filter: grayscale(100%) invert(100%) brightness(100%);
+}
+
+#header #header-logo-img2 {
+  margin-left: -10px !important;
 }
 
 @media (max-width: 992px) {

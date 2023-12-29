@@ -135,9 +135,15 @@
 
             <div id="logo"
                 class="me-auto">
-                <h1><img src="./assets/img/logo.png"
+                <h1>
+                    <img src="./assets/img/logo.png"
                         alt="Code Kshetra"
-                        id="header-logo-img"
+                        id="header-logo-img1"
+                        class="img-fluid">
+                    
+                    <img src="./assets/img/geek_room_logo.png"
+                        alt="Code Kshetra"
+                        id="header-logo-img2"
                         class="img-fluid">
                     <a href="./"
                         id="header-logo-link"
@@ -148,43 +154,43 @@
             </div>
 
 
-        <nav id="navbar"
-            class="navbar order-last order-lg-0">
-            <ul>
-                <li><a class="nav-link scrollto"
-                        href="./#hero">Home</a></li>
-                <li><a class="nav-link scrollto"
-                        href="./#gallery">Themes</a></li>
-                <li><a class="nav-link scrollto"
-                        href="./#schedule">Schedule</a></li>
-                <li><a class="nav-link scrollto"
-                        href="./#Prizes">Prizes</a></li>
-                <li><a class="nav-link scrollto"
-                        href="./#judges">Judges</a></li>
-                <li><a class="nav-link scrollto active"
-                        href="./mentors.html">Mentors</a></li>
-                <li><a class="nav-link scrollto"
-                        href="./our-team.html">Team</a></li>
-                <li class="dropdown">
-                    <a href="#"><span>Get Involved</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a
-                                href="mailto:codekshetra.hackathon@gmail.com?subject=Become%20a%20Sponsor&body=I%20want%20to%20become%20a%20sponsor%20for%20CodeKshetra.%20Please%20provide%20more%20information.">
-                                Become a sponsor
-                            </a></li>
-                        <li><a href="https://forms.gle/bwNw43F9rQpeoWu9A"
-                                target="_blank">
-                                Become a mentor
-                            </a></li>
-                        <li><a
-                                href="mailto:codekshetra.hackathon@gmail.com?subject=Become%20a%20Community%20Partner&body=I%20want%20to%20become%20a%20Community%20Partner%20for%20CodeKshetra.%20Please%20provide%20more%20information.">
-                                Become a Community Partner
-                            </a></li>
-                    </ul>
-                </li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
+            <nav id="navbar"
+                class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto"
+                            href="./#hero">Home</a></li>
+                    <li><a class="nav-link scrollto"
+                            href="./#gallery">Themes</a></li>
+                    <li><a class="nav-link scrollto"
+                            href="./#schedule">Schedule</a></li>
+                    <li><a class="nav-link scrollto"
+                            href="./#Prizes">Prizes</a></li>
+                    <li><a class="nav-link scrollto"
+                            href="./#judges">Judges</a></li>
+                    <li><a class="nav-link scrollto active"
+                            href="./mentors.html">Mentors</a></li>
+                    <li><a class="nav-link scrollto"
+                            href="./our-team.html">Team</a></li>
+                    <li class="dropdown">
+                        <a href="#"><span>Get Involved</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a
+                                    href="mailto:codekshetra.hackathon@gmail.com?subject=Become%20a%20Sponsor&body=I%20want%20to%20become%20a%20sponsor%20for%20CodeKshetra.%20Please%20provide%20more%20information.">
+                                    Become a sponsor
+                                </a></li>
+                            <li><a href="https://forms.gle/bwNw43F9rQpeoWu9A"
+                                    target="_blank">
+                                    Become a mentor
+                                </a></li>
+                            <li><a
+                                    href="mailto:codekshetra.hackathon@gmail.com?subject=Become%20a%20Community%20Partner&body=I%20want%20to%20become%20a%20Community%20Partner%20for%20CodeKshetra.%20Please%20provide%20more%20information.">
+                                    Become a Community Partner
+                                </a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
         </div>
     </header><!-- End Header -->
 
@@ -216,16 +222,30 @@
         <div class="footer-top">
             <div class="container">
                 <div class="row">
-    
+
                     <div class="col-lg-3 col-md-6 footer-info">
-                        <img src="assets/img/logo.png"
-                            alt="Code Kshetra">
-                        <p>Empowering tech enthusiasts, CodeKshetra fosters creativity and learning in the world of coding.
-                            Join us
-                            in the
-                            pursuit of innovation and knowledge.</p>
+                        <div class="row d-flex align-items-center justify-content-center">
+                            <div class="col">
+                                <img src="assets/img/logo.png"
+                                    class="img-fluid"
+                                    alt="Code Kshetra">
+                                <i class="bi bi-x"
+                                    style="font-size: 2rem;"></i>
+                                <img src="assets/img/geek_room_logo.png"
+                                    class="img-fluid"
+                                    alt="Geek Room">
+                            </div>
+                        </div>
+
+                        <p>Code Kshetra, a groundbreaking hackathon by JIMS Sector-5 Rohini and <a
+                                href="https://geekroom.in/"
+                                target="_blank"
+                                rel="noopener noreferrer">Geek Room</a>, redefines creativity and technology.
+                            Join us in the pursuit of innovation, transcending traditional hackathons.</p>
+
                     </div>
-    
+
+
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
@@ -233,14 +253,16 @@
                             <li><i class="bi bi-chevron-right"></i> <a href="./#aboutCodeKshetra">About</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="./#gallery">Theme</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="./#schedule">Schedule</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="./code-of-conduct.html">Code of Conduct</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="./code-of-conduct.html">Code of Conduct</a>
+                            </li>
                         </ul>
                     </div>
-    
+
                     <div class="col-lg-3 col-md-6 footer-contact">
                         <h4>Contact Us</h4>
                         <p>
-                            JIMS, Near Rithala Metro Station Rohini Sector 5, Institutional Area, New Delhi, Delhi 110085
+                            JIMS, Near Rithala Metro Station Rohini Sector 5, Institutional Area, New Delhi, Delhi
+                            110085
                             <br>
                             <strong>Email:</strong> <br>
                             <i class="bi bi-envelope"></i>
@@ -259,7 +281,7 @@
                                 Geek Room
                             </a>
                         </p>
-    
+
                         <div class="social-links">
                             <a href="https://discord.com/invite/7TEVm4pmMv"
                                 target="_blank"
@@ -271,9 +293,9 @@
                                 target="_blank"
                                 class="linkedin"><i class="bi bi-linkedin"></i></a>
                         </div>
-    
+
                     </div>
-    
+
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Get Involved</h4>
                         <ul>
@@ -288,7 +310,7 @@
                                 </a></li>
                         </ul>
                     </div>
-    
+
                 </div>
             </div>
         </div>
