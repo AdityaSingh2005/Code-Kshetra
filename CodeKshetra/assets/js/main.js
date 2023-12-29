@@ -237,17 +237,20 @@
   document.addEventListener("DOMContentLoaded", function () {
     var header = document.getElementById("header");
     var logoText = document.getElementById("header-logo-link");
-    var logoImg = document.getElementById("header-logo-img");
+    var logoImg1 = document.getElementById("header-logo-img1");
+    var logoImg2 = document.getElementById("header-logo-img2");
 
     window.addEventListener("scroll", function () {
       if (window.scrollY > 0) {
         header.classList.add("header-scrolled");
         logoText.style.display = "block";
-        logoImg.style.display = "none";
+        logoImg1.style.display = "none";
+        logoImg2.style.display = "none";
       } else {
         header.classList.remove("header-scrolled");
         logoText.style.display = "none";
-        logoImg.style.display = "block";
+        logoImg1.style.display = "inline";
+        logoImg2.style.display = "inline";
       }
     });
   });

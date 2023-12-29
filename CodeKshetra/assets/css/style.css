@@ -7,6 +7,7 @@
 # General
 --------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -67,28 +68,28 @@ h6 {
   height: 100%;
   background-color: #ffffff00;
   display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  border: 8px solid #0e1b4d;
+  border-top: 8px solid #A90377;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .loader {
-    border: 8px solid #0e1b4d;
-    border-top: 8px solid #A90377;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
+
+  100% {
+    transform: rotate(360deg);
   }
-  
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(360deg);
-    }
 }
 
 /*--------------------------------------------------------------
@@ -203,11 +204,18 @@ h6 {
 }
 
 #header #logo img {
-  filter: grayscale(100%) invert(100%) brightness(100%);
   padding: 0;
   margin: 0;
   max-height: 50px !important;
   transition: opacity 0.5s ease;
+}
+
+#header #header-logo-img1 {
+  filter: grayscale(100%) invert(100%) brightness(100%);
+}
+
+#header #header-logo-img2 {
+  margin-left: -10px !important;
 }
 
 @media (max-width: 992px) {
@@ -917,7 +925,8 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Our Team Section --------------------------------------------------------------*/ #ourTeam {
+# Our Team Section --------------------------------------------------------------*/
+#ourTeam {
   padding: 60px 5px;
 }
 
@@ -943,6 +952,7 @@ h6 {
 #ourTeam .btn:hover {
   background: rgba(6, 12, 34, 0.85);
 }
+
 /* General Styles */
 #ourTeam .box,
 #ourTeam-details .details h2,
@@ -964,12 +974,12 @@ h6 {
   text-align: center;
   background: #ededed;
   border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-  }
-  
-  #ourTeam .box:hover {
-    background: #d9d9d9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+#ourTeam .box:hover {
+  background: #d9d9d9;
 }
 
 #ourTeam .box1 {
@@ -1002,7 +1012,7 @@ h6 {
   border: 5px solid rgba(255, 255, 255, 0);
   border-radius: 2%;
   pointer-events: fill;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Font Styles */
@@ -1026,6 +1036,7 @@ h6 {
   color: gray;
   margin: 10px 30px 20px;
 }
+
 #ourTeam .image .initials {
   display: flex;
   align-items: center;
@@ -1064,33 +1075,34 @@ h6 {
 
 #ourTeam p {
   margin: 0 0 2px;
-  }
-  
-  /* Team Details Styles */
-  #ourTeam-details .details h2 {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  
-  #ourTeam-details .details .social {
-    margin-bottom: 15px;
-  }
-  
-  #ourTeam-details .social a:hover {
-    background: #a90377;
-    color: #fff;
-  }
-  
-  #ourTeam-details .social a i {
-    font-size: 16px;
-    line-height: 0;
+}
+
+/* Team Details Styles */
+#ourTeam-details .details h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#ourTeam-details .details .social {
+  margin-bottom: 15px;
+}
+
+#ourTeam-details .social a:hover {
+  background: #a90377;
+  color: #fff;
+}
+
+#ourTeam-details .social a i {
+  font-size: 16px;
+  line-height: 0;
 }
 
 #ourTeam-details .details p {
   font-size: 15px;
   margin-bottom: 10px;
 }
+
 /* Content-1:End */
 /*--------------------------------------------------------------
 # judges Section
@@ -1387,6 +1399,7 @@ h6 {
     top: -43px;
   }
 }
+
 /*--------------------------------------------------------------
 # Schedule Section
 --------------------------------------------------------------*/
@@ -1523,6 +1536,7 @@ h6 {
 #venue {
   padding: 60px;
 }
+
 #venue .container-fluid {
   margin-bottom: 3px;
 }
@@ -1561,9 +1575,10 @@ h6 {
   #venue .venue-info h3 {
     font-size: 24px;
   }
-        #venue {
-          padding: 60px 0px;
-        }
+
+  #venue {
+    padding: 60px 0px;
+  }
 }
 
 #venue .venue-info p {
@@ -1624,18 +1639,14 @@ h6 {
 #row {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
 }
 
 #row .prize {
-
   border: 1px solid #e0e5fa;
   border-radius: 1rem;
   background-color: #13032af7;
   margin-bottom: 3rem;
-  width: 50%;
-  margin-left: 2rem;
 }
 
 #row .prize:hover {
@@ -1643,25 +1654,24 @@ h6 {
 }
 
 #row .prize-img {
-
   overflow: hidden;
   margin-bottom: 15px;
-
 }
 
-#row .awarad{
+#Prizes .row .col-md-2 {
   border: 1px solid #e0e5fa;
   border-radius: 1rem;
   background-color: #13032af7;
-  margin-bottom: 3rem;
-  width: 100%;
-  margin-left: 3rem;
+  padding: 0;
 }
 
-#row .awarad-img{
+
+#row .awarad-img {
   overflow: hidden;
-  width: 100%; /* Make the image fill the container */
-  height: auto; /* Maintain the aspect ratio */
+  width: 100%;
+  /* Make the image fill the container */
+  height: auto;
+  /* Maintain the aspect ratio */
   border-radius: 5px;
 }
 
@@ -1681,7 +1691,7 @@ h6 {
 
 #row h4 {
   font-weight: 1000;
-  font-size:small;
+  font-size: small;
   margin-bottom: 5px;
   padding: 0 20px;
   color: white;
@@ -1718,14 +1728,14 @@ h6 {
   font-size: 15px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 
   #row .prize {
     width: 80%;
     margin-left: 0;
   }
 
-  #row .awarad{
+  #row .awarad {
     width: 50%;
     margin-left: 0;
   }
@@ -1733,7 +1743,7 @@ h6 {
   #row {
     flex-direction: column;
   }
-}
+} */
 
 
 /*--------------------------------------------------------------
@@ -2230,7 +2240,7 @@ h6 {
 }
 
 #footer .footer-top .footer-info img {
-  height: 120px;
+  height: 80px;
   margin-bottom: 20px;
 }
 

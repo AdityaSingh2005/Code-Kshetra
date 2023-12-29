@@ -92,10 +92,17 @@
 
       <div id="logo"
         class="me-auto">
-        <h1><img src="./assets/img/logo.png"
+        <h1>
+          <img src="./assets/img/logo.png"
             alt="Code Kshetra"
-            id="header-logo-img"
+            id="header-logo-img1"
             class="img-fluid">
+
+          <img src="./assets/img/geek_room_logo.png"
+            alt="Code Kshetra"
+            id="header-logo-img2"
+            class="img-fluid">
+
           <a href="./"
             id="header-logo-link"
             style="display: none;">
@@ -214,7 +221,7 @@
               lot of fun. It's your opportunity to connect with experienced mentors and judges.
             </p>
             <p>
-              Organized by Geek Room, a vibrant community dedicated to enhancing coding skills, started as an open
+              Organized by <a href="https://geekroom.in/">Geek Room</a>, a vibrant community dedicated to enhancing coding skills, started as an open
               community for solving tech-related queries and participating in college competitions. In a short span, it
               has grown to include 6000+ participants from colleges across India. Now, launching chapters in different
               colleges, we're excited to have it at JIMS!
@@ -227,8 +234,17 @@
             </p>
           </div>
           <div class="col-lg-6">
-            <div id="logoCanvas"></div>
+            <div id="logoCanvas"
+              style="position: relative;">
+              <!-- Your canvas content goes here -->
+          
+              <!-- Small image on the left side corner -->
+              <img src="./assets/img/geek_room_logo.png"
+                alt="Small Image"
+                style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-radius: 50%;">
+            </div>
           </div>
+
         </div>
       </div>
     </section><!-- End About Code-Kshetra Section -->
@@ -481,11 +497,13 @@
           <h2>PRIZES & PERKS</h2>
           <p>Prizes are the silent cheers for your relentless efforts.</p>
         </div>
+
         <div id="row"
+          class="row mx-5"
           data-aos="fade-up"
           data-aos-delay="100">
           <!--Prize card-->
-          <div class="prize">
+          <div class="prize col-md-3 d-flex flex-column align-items-stretch">
             <div class="prize-img">
               <img src="assets/img/Prizes/1st.svg"
                 alt="prize 1"
@@ -496,7 +514,7 @@
             </div>
           </div>
           <!-- Merchandise & Coupons card-->
-          <div class="prize">
+          <div class="prize col-md-3 d-flex flex-column align-items-stretch">
             <div class="prize-img">
               <img src="assets/img/Prizes/2nd.svg"
                 alt="2nd prize"
@@ -507,7 +525,7 @@
             </div>
           </div>
           <!--Internship & full-time..  card-->
-          <div class="prize">
+          <div class="prize col-md-3 d-flex flex-column align-items-stretch">
             <div class="prize-img">
               <img src="assets/img/Prizes/intern.svg"
                 alt="prize 3"
@@ -518,62 +536,64 @@
             </div>
           </div>
         </div>
+
         <div id="row"
+          class="row mx-5"
           data-aos="fade-up"
           data-aos-delay="100">
-          <div class="awarad">
-            <div class="awarad-img">
-              <img src="assets/img/Prizes/1st.jpg"
-                alt="prize 1"
-                height=100%
-                width=100%>
-              <div style="margin: 1rem 0; ">
-                <h4>Cash Prize for Winner team.</h4>
-              </div>
-            </div>
-          </div>
-          <div class="awarad">
-            <div class="awarad-img">
-              <img src="assets/img/Prizes/1st.jpg"
-                alt="prize 1"
-                height="auto"
-                width=100%>
-              <div style="margin: 1rem 0; ">
-                <h4>Cash Prize for 1<sup>st</sup> Runner-up Team</h4>
-              </div>
-            </div>
-          </div>
-          <div class="awarad">
-            <div class="awarad-img">
+          <div class="col-md-2 d-flex flex-column align-items-stretch mb-3">
+            <div>
               <img src="assets/img/Prizes/1st.jpg"
                 alt="prize 1"
                 class="img-fluid">
-              <div style="margin: 1rem 0; ">
-                <h4>Cash Prize for 2<sup>nd</sup> Runner-up Team</h4>
-              </div>
+            </div>
+            <div style="margin: 1rem 0;">
+              <h4>Cash Prize for Winner team.</h4>
             </div>
           </div>
-          <div class="awarad">
-            <div class="awarad-img">
+          <div class="col-md-2 d-flex flex-column align-items-stretch mb-3">
+            <div>
               <img src="assets/img/Prizes/1st.jpg"
                 alt="prize 1"
                 class="img-fluid">
-              <div style="margin: 1rem 0;">
-                <h4>Amazing Prizes for Best Problem Statement Solver.</h4>
-              </div>
+            </div>
+            <div style="margin: 1rem 0;">
+              <h4>Cash Prize for 1<sup>st</sup> Runner-up Team</h4>
             </div>
           </div>
-          <div class="awarad">
-            <div class="awarad-img">
+          <div class="col-md-2 d-flex flex-column align-items-stretch mb-3">
+            <div>
               <img src="assets/img/Prizes/1st.jpg"
                 alt="prize 1"
                 class="img-fluid">
-              <div style="margin: 1rem 0;">
-                <h4>Amazing Prizes For all freshers team.</h4>
-              </div>
+            </div>
+            <div style="margin: 1rem 0;">
+              <h4>Cash Prize for 2<sup>nd</sup> Runner-up Team</h4>
+            </div>
+          </div>
+          <div class="col-md-2 d-flex flex-column align-items-stretch mb-3">
+            <div>
+              <img src="assets/img/Prizes/1st.jpg"
+                alt="prize 1"
+                class="img-fluid">
+            </div>
+            <div style="margin: 1rem 0;">
+              <h4>Amazing Prizes for Best Problem Statement Solver.</h4>
+            </div>
+          </div>
+          <div class="col-md-2 d-flex flex-column align-items-stretch mb-3">
+            <div>
+              <img src="assets/img/Prizes/1st.jpg"
+                alt="prize 1"
+                class="img-fluid">
+            </div>
+            <div style="margin: 1rem 0;">
+              <h4>Amazing Prizes For all freshers team.</h4>
             </div>
           </div>
         </div>
+
+
       </div>
     </section><!-- End Prize Section -->
 
@@ -1087,12 +1107,26 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <img src="assets/img/logo.png"
-              alt="Code Kshetra">
-            <p>Empowering tech enthusiasts, CodeKshetra fosters creativity and learning in the world of coding. Join us
-              in the
-              pursuit of innovation and knowledge.</p>
+            <div class="row d-flex align-items-center justify-content-center">
+              <div class="col">
+                <img src="assets/img/logo.png"
+                  class="img-fluid"
+                  alt="Code Kshetra">
+                <i class="bi bi-x"
+                  style="font-size: 2rem;"></i>
+                <img src="assets/img/geek_room_logo.png"
+                  class="img-fluid"
+                  alt="Geek Room">
+              </div>
+            </div>
+
+            <p>Code Kshetra, a groundbreaking hackathon by JIMS Sector-5 Rohini and <a href="https://geekroom.in/"
+                target="_blank"
+                rel="noopener noreferrer">Geek Room</a>, redefines creativity and technology.
+              Join us in the pursuit of innovation, transcending traditional hackathons.</p>
+
           </div>
+
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
