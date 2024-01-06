@@ -757,6 +757,12 @@ h6 {
       }
     }
   }
+
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 60%;
+  }
 }
 
 @keyframes pulsate-btn {
