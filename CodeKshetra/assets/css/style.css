@@ -1,6 +1,6 @@
 /**
 * Template Name: Code Kshetra
-* Updated: Dec 19 2023 with Bootstrap v5.3.2
+* Updated: 07/01/2024 with Bootstrap v5.3.2
 */
 
 /*--------------------------------------------------------------
@@ -756,6 +756,12 @@ h6 {
         }
       }
     }
+  }
+
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 60%;
   }
 }
 
