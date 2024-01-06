@@ -1,6 +1,5 @@
 /**
 * Template Name: Code Kshetra
-* Developer: Navneet Baid
 * Updated: Dec 30 2023
 */
 (function () {

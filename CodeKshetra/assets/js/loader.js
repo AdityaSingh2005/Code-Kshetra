@@ -1,35 +1,29 @@
+/**
+ * Team Members, Mentors and Judges Display Script
+ * 
+ * Author: Navneet Baid
+ * Last Updated: 07/01/2024
+ * 
+ * Description: 
+ * This script fetches data for judges, mentors, and team members from JSON files
+ * and dynamically displays them on the webpage in designated sections.
+ */
 
+
+// ---------------------- Judges Section ----------------------
 const judgesContainer = document.getElementById('judges-container');
 const loadMoreJudgeBtn = document.getElementById('loadMoreJudgeBtn');
 const judgesPerLoad = 4;
 let currentJudges = 0;
 let judgesData = null;
-const mentorsContainer = document.getElementById('mentors-container');
-const loadMoreMentorsBtn = document.getElementById('loadMoreMentorsBtn');
-const mentorsPerLoad = 12;
-let currentMentors = 0;
-let mentorsData = null;
-
-
+// Fetch judges data from JSON file
 async function fetchJudgesData() {
     const response = await fetch('assets/meta-data/judges.json');
     const data = await response.json();
     judgesData = data;
     return data;
 }
-async function fetchMentorsData() {
-
-    try {
-        const response = await fetch('assets/meta-data/mentors.json');
-        const data = await response.json();
-        mentorsData = data;
-        return data;
-    } catch (error) {
-        console.error('Error fetching mentors data:', error);
-        // Handle the error or show an error message to the user
-    }
-}
-
+// Show more judges on button click
 function showMoreJudges() {
     if (!judgesData) {
         fetchJudgesData().then(() => showMoreJudges());
@@ -50,6 +44,7 @@ function showMoreJudges() {
         loadMoreJudgeBtn.style.display = 'none';
     }
 }
+// Render judges on the webpage
 function renderJudges(start, end) {
     judgesData.slice(start, end).forEach((judge, index) => {
         const col = document.createElement('div');
@@ -95,6 +90,27 @@ function renderJudges(start, end) {
     });
 
 }
+
+// ---------------------- Mentors Section ----------------------
+const mentorsContainer = document.getElementById('mentors-container');
+const loadMoreMentorsBtn = document.getElementById('loadMoreMentorsBtn');
+const mentorsPerLoad = 12;
+let currentMentors = 0;
+let mentorsData = null;
+// Fetch mentors data from JSON file
+async function fetchMentorsData() {
+
+    try {
+        const response = await fetch('assets/meta-data/mentors.json');
+        const data = await response.json();
+        mentorsData = data;
+        return data;
+    } catch (error) {
+        console.error('Error fetching mentors data:', error);
+        // Handle the error or show an error message to the user
+    }
+}
+// Show more mentors on button click
 function showMoreMentors() {
 
     if (!mentorsData) {
@@ -117,6 +133,7 @@ function showMoreMentors() {
         loadMoreMentorsBtn.style.display = 'none';
     }
 }
+// Render mentors on the webpage
 function renderMentors(start, end) {
     mentorsData.slice(start, end).forEach((mentor, index) => {
         const col = document.createElement('div');
@@ -163,40 +180,17 @@ function renderMentors(start, end) {
         mentorsContainer.appendChild(col);
     });
 }
-function createSocialLink(platform, url) {
-    const link = document.createElement('a');
-    link.href = url;
-    link.target = '_blank';
-    link.innerHTML = `<i class="bi bi-${platform.toLowerCase()}"></i>`;
-    return link;
-}
-function getRandomColor() {
-    const colors = [
-        '#3498db', // Blue
-        '#e74c3c', // Red
-        '#2ecc71', // Green
-        '#f39c12', // Orange
-        '#9b59b6', // Purple
-        '#1abc9c', // Teal
-        '#e67e22', // Pumpkin
-        '#3498db', // Belize Hole
-        '#2c3e50', // Midnight Blue
-        '#f1c40f', // Sunflower
-    ];
 
-    // Randomly select a color from the array
-    const randomIndex = Math.floor(Math.random() * colors.length);
-    return colors[randomIndex];
-}
-
-// Team Members
+// ---------------------- Team Members Section ----------------------
 let teamData = null;
+// Fetch team members data from JSON file
 async function fetchTeamData() {
     const response = await fetch('assets/meta-data/team-members.json');
     const data = await response.json();
     teamData = data;
     return data;
 }
+// Show more team members on button click
 function showMoreTeamMembers() {
     if (!teamData) {
         fetchTeamData().then(() => showMoreTeamMembers());
@@ -208,6 +202,7 @@ function showMoreTeamMembers() {
     }
     renderTeamMembersByCategory();
 }
+// Render team members by category on the webpage
 function renderTeamMembersByCategory() {
     const categories = [...new Set(teamData.map(member => member.category))];
     categories.forEach(category => {
@@ -248,6 +243,7 @@ function renderTeamMembersByCategory() {
         renderTeamMembers(category);
     });
 }
+// Render team members based on category on the webpage
 function renderTeamMembers(category) {
     const teamContainer = document.getElementById(`${category.toLowerCase()}-team-members-container`);
 
@@ -355,4 +351,32 @@ function renderTeamMembers(category) {
     GLightbox({
         selector: '[data-glightbox]',
     });
+}
+
+// Helper function to create a social link
+function createSocialLink(platform, url) {
+    const link = document.createElement('a');
+    link.href = url;
+    link.target = '_blank';
+    link.innerHTML = `<i class="bi bi-${platform.toLowerCase()}"></i>`;
+    return link;
+}
+// Helper function to get a random color
+function getRandomColor() {
+    const colors = [
+        '#3498db', // Blue
+        '#e74c3c', // Red
+        '#2ecc71', // Green
+        '#f39c12', // Orange
+        '#9b59b6', // Purple
+        '#1abc9c', // Teal
+        '#e67e22', // Pumpkin
+        '#3498db', // Belize Hole
+        '#2c3e50', // Midnight Blue
+        '#f1c40f', // Sunflower
+    ];
+
+    // Randomly select a color from the array
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex];
 }
