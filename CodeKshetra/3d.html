@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Codekshetra :: 3D Logo</title>
+    <meta name="description"
+        content="Codekshetra 3D Logo">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #logoCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #logoImage {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="logoCanvas">
+        <img id="logoImage"
+            src="./assets/img/geek_room_logo.png"
+            alt="Small Image"
+            onclick="launchFullScreen(document.documentElement)"
+            loading="lazy">
+        <img id=""
+            src="./assets/img/jims_logo.png"
+            style="position: absolute; top: 0; right: 0; width: 80px; height: 65px; margin-top: 8px; margin-right: 8px; filter: brightness(0) invert(1);"
+            alt="Small Image"
+            loading="lazy">
+    </div>
+
+
+
+    <!-- 3DLogo JS File -->
+    <script type="module">
+        import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.module.js';
+        import { GLTFLoader } from 'https://threejsfundamentals.org/threejs/resources/threejs/r125/examples/jsm/loaders/GLTFLoader.js';
+        import { OrbitControls } from 'https://threejsfundamentals.org/threejs/resources/threejs/r125/examples/jsm/controls/OrbitControls.js';
+
+        // Set up Three.js scene, camera, and renderer
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 40;
+        const renderer = new THREE.WebGLRenderer();
+        renderer.outputEncoding = THREE.sRGBEncoding;
+        document.getElementById('logoCanvas').appendChild(renderer.domElement);
+
+        // Load 3D logo model using GLTFLoader
+        const gltfLoader = new GLTFLoader();
+        let object;
+
+        // Set initial ambient light intensity
+        let ambientLightIntensity = 0.4;
+
+        // Function to calculate initial scale based on screen size
+        const getInitialScale = () => {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            if (width < 600 && height < 600) {
+                // Phone
+                return 0.06;
+            } else if (width < 1024 && height < 768) {
+                // Tablet
+                return 0.08;
+            } else if (width < 1440) {
+                // Laptop
+                return 0.12;
+            } else if (width < 1920) {
+                // Monitor
+                return 0.16;
+            } else {
+                // TV or larger screens
+                return 0.2;
+            }
+        };
+
+        const initialScale = getInitialScale();
+
+        // Load the 3D logo model and set initial scale
+        gltfLoader.load('./assets/3DLogo.gltf', (gltf) => {
+            gltf.scene.scale.set(initialScale, initialScale, initialScale);
+            scene.add(gltf.scene);
+
+            // Add hemisphere light for sky-like ambient lighting
+            const hemisphereLight = new THREE.HemisphereLight(0x87CEEB, 0x4682B4, 1); // Sky color, ground color, intensity
+            scene.add(hemisphereLight);
+
+            // Add directional light to the scene
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+            directionalLight.position.set(5, 5, 5);
+            scene.add(directionalLight);
+
+            // Set camera position and orientation based on the 3D model
+            const boundingBox = new THREE.Box3().setFromObject(gltf.scene);
+            const center = boundingBox.getCenter(new THREE.Vector3());
+            const size = boundingBox.getSize(new THREE.Vector3());
+
+            // Additional camera and focus adjustments
+            const maxSize = Math.max(size.x, size.y, size.z);
+            const fitHeightDistance = maxSize / (2 * Math.atan((Math.PI * camera.fov) / 360));
+            const fitWidthDistance = fitHeightDistance / camera.aspect;
+            const distance = 1.2 * Math.max(fitHeightDistance, fitWidthDistance);
+
+            const direction = new THREE.Vector3();
+            camera.getWorldDirection(direction);
+            const focusPoint = direction.clone().multiplyScalar(distance).add(center);
+            camera.lookAt(focusPoint);
+
+            object = gltf.scene;
+        });
+
+        // Set up OrbitControls for interactive camera movement
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.autoRotate = true;
+        controls.enableZoom = false;
+
+        // Add particles to the scene
+        const particleGeometry = new THREE.BufferGeometry();
+        const particleMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.1 });
+
+        const particles = new THREE.Points(particleGeometry, particleMaterial);
+        scene.add(particles);
+
+        // Generate random particles in a cube
+        const particlesPositionArray = new Float32Array(2000 * 2);
+
+        for (let i = 0; i < particlesPositionArray.length; i += 3) {
+            particlesPositionArray[i] = (Math.random() - 0.5) * 100;
+            particlesPositionArray[i + 1] = (Math.random() - 0.5) * 100;
+            particlesPositionArray[i + 2] = (Math.random() - 0.5) * 100;
+        }
+
+        particleGeometry.setAttribute('position', new THREE.BufferAttribute(particlesPositionArray, 4));
+
+        // Animation function
+        const animate = () => {
+            requestAnimationFrame(animate);
+
+            // Rotate the object if autoRotate is enabled
+            if (object) {
+                if (controls.autoRotate) {
+                    object.rotation.y += 0.0001;
+                }
+            }
+
+            // Update particles animation
+            particles.rotation.y += 0.001;
+
+            // Update camera and renderer based on window size
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+            // Update controls and render the scene
+            controls.update();
+            renderer.render(scene, camera);
+
+            // Update background color based on ambient light intensity
+            const ambientColor = new THREE.Color(0x060c22); // Dark blue color
+            renderer.setClearColor(ambientColor);
+        };
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        animate();
+
+    </script>
+    <script>
+        // Find the right method, call on the correct element
+        function launchFullScreen(element) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            }
+        }
+    </script>
+</body>
+
+</html>
