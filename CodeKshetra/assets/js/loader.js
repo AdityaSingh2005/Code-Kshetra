@@ -148,7 +148,7 @@ function renderMentors(start, end) {
         image.src = mentor.image;
         image.alt = `${mentor.name} - Mentor`;
         image.classList.add('card-img-top', 'img-fluid');
-
+        image.loading = "lazy";
         const cardBody = document.createElement('div');
         cardBody.classList.add('card-body');
 
@@ -265,6 +265,7 @@ function renderTeamMembers(category) {
             image.classList.add('image');
             const imgElement = document.createElement('img');
             imgElement.style.cursor = 'pointer';
+            imgElement.loading="lazy";
 
             // Check if the member's image is blank
             if (member.image.trim() === '') {

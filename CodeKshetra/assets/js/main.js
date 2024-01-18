@@ -239,6 +239,7 @@
     var logoText = document.getElementById("header-logo-link");
     var logoImg1 = document.getElementById("header-logo-img1");
     var logoImg2 = document.getElementById("header-logo-img2");
+    var logoImg3 = document.getElementById("header-logo-img3");
 
     window.addEventListener("scroll", function () {
       if (window.scrollY > 0) {
@@ -246,11 +247,13 @@
         logoText.style.display = "block";
         logoImg1.style.display = "none";
         logoImg2.style.display = "none";
+        logoImg3.style.display = "none";
       } else {
         header.classList.remove("header-scrolled");
         logoText.style.display = "none";
         logoImg1.style.display = "inline";
         logoImg2.style.display = "inline";
+        logoImg3.style.display = "inline";
       }
     });
   });

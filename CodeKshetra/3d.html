@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
-    <title>3D Logo with Particles</title>
+    <title>Codekshetra :: 3D Logo</title>
+    <meta name="description"
+        content="Codekshetra 3D Logo">
+
     <style>
         body {
             margin: 0;
+            padding: 0;
             overflow: hidden;
         }
 
@@ -17,7 +21,7 @@
             top: 0;
             left: 0;
             width: 100vw;
-            height: 100vh;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -25,21 +29,31 @@
 
         #logoImage {
             position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            top: 0px;
+            left: 0px;
+            width: 80px;
+            height: 80px;
         }
     </style>
+
 </head>
 
 <body>
 
-    <div id="logoCanvas"></div>
-    <img id="logoImage"
-        src="./assets/img/geek_room_logo.png"
-        alt="Small Image">
+    <div id="logoCanvas">
+        <img id="logoImage"
+            src="./assets/img/geek_room_logo.png"
+            alt="Small Image"
+            onclick="launchFullScreen(document.documentElement)"
+            loading="lazy">
+        <img id=""
+            src="./assets/img/jims_logo.png"
+            style="position: absolute; top: 0; right: 0; width: 80px; height: 65px; margin-top: 8px; margin-right: 8px; filter: brightness(0) invert(1);"
+            alt="Small Image"
+            loading="lazy">
+    </div>
+
+
 
     <!-- 3DLogo JS File -->
     <script type="module">
@@ -60,7 +74,7 @@
         let object;
 
         // Set initial ambient light intensity
-        let ambientLightIntensity = 0.8;
+        let ambientLightIntensity = 0.4;
 
         // Function to calculate initial scale based on screen size
         const getInitialScale = () => {
@@ -69,25 +83,23 @@
 
             if (width < 600 && height < 600) {
                 // Phone
-                return 0.03;
+                return 0.06;
             } else if (width < 1024 && height < 768) {
                 // Tablet
-                return 0.04;
+                return 0.08;
             } else if (width < 1440) {
                 // Laptop
                 return 0.12;
             } else if (width < 1920) {
                 // Monitor
-                return 0.15;
+                return 0.16;
             } else {
                 // TV or larger screens
-                return 0.18;
+                return 0.2;
             }
         };
 
         const initialScale = getInitialScale();
-
-      // ...
 
         // Load the 3D logo model and set initial scale
         gltfLoader.load('./assets/3DLogo.gltf', (gltf) => {
@@ -121,8 +133,6 @@
 
             object = gltf.scene;
         });
-
-        // ...
 
         // Set up OrbitControls for interactive camera movement
         const controls = new OrbitControls(camera, renderer.domElement);
@@ -183,6 +193,19 @@
         });
 
         animate();
+
+    </script>
+    <script>
+        // Find the right method, call on the correct element
+        function launchFullScreen(element) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            }
+        }
     </script>
 </body>
 
