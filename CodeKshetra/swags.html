@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Codekshetra Hackathon Swags and Prizes">
+    <!-- Google tag (gtag.js) -->
+    <script async
+        src="https://www.googletagmanager.com/gtag/js?id=G-NV9K5N20WT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NV9K5N20WT');
+    </script>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0"
+        name="viewport">
+    <title>Codekshetra: Swags and Prizes</title>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Code क्षेत्र: The Ultimate 36-Hour Hackathon in February 2024 at JIMS Rohini Sector-5. Dive into coding challenges, showcase your skills, and win exciting swags and prizes.">
+    <meta name="keywords"
+        content="CodeKshetra, hackathon, Team Members, coding, innovation, JIMS Rohini, tech event, February 2024">
+    <meta name="author"
+        content="geekroom_jims">
+
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title"
+        content="Code क्षेत्र: Swags and Prizes">
+    <meta property="og:description"
+        content="Dive into coding challenges, showcase your skills, and win exciting swags and prizes.">
+    <meta property="og:image"
+        content="https://codekshetra.vercel.app/assets/img/logo.png">
+    <meta property="og:url"
+        content="https://codekshetra.vercel.app/">
+    <meta property="og:type"
+        content="website">
+
+    <!-- Twitter Meta Tags (for Twitter Card) -->
+    <meta name="twitter:card"
+        content="summary_large_image">
+    <meta name="twitter:title"
+        content="Code क्षेत्र: Swags and Prizes">
+    <meta name="twitter:description"
+        content="Dive into coding challenges, showcase your skills, and win exciting swags and prizes.">
+    <meta name="twitter:image"
+        content="https://codekshetra.vercel.app/assets/img/logo.png">
+
+    <!-- Favicons -->
+    <link href="https://codekshetra.vercel.app/assets/img/logo.png"
+        rel="icon">
+    <link href="https://codekshetra.vercel.app/assets/img/logo.png"
+        rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="./assets/vendor/aos/aos.css"
+        rel="stylesheet">
+    <link href="./assets/vendor/bootstrap/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css"
+        rel="stylesheet">
+    <link href="./assets/vendor/glightbox/css/glightbox.min.css"
+        rel="stylesheet">
+    <link href="./assets/vendor/swiper/swiper-bundle.min.css"
+        rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="./assets/css/style.css"
+        rel="stylesheet">
+    <!-- jQuery -->
+    <script type="text/javascript"
+        charset="utf8"
+        src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #header {
+            height: 90px;
+            position: fixed;
+            left: 0;
+            background: rgba(6, 12, 34, 0.98);
+            height: 70px;
+            top: 0;
+            right: 0;
+            transition: all 0.5s;
+            z-index: 997;
+        }
+
+        #swags {
+            margin-top: 70px;
+        }
+
+        :root {
+            --blue: #1E70FF;
+            --blueRGB: 30, 112, 255;
+            --pink: #FD3CA9;
+            --pinkRGB: 253, 60, 169;
+        }
+
+        .swiper {
+            width: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .mySwiperNested {
+            .swiper-slide {
+                width: 300px;
+                padding: 15px 0;
+
+                @media (max-width: 991px) {
+                    width: 250px;
+                }
+            }
+
+            .coupon__wrap {
+                display: flex;
+                flex-flow: row;
+                width: 100%;
+                border-radius: 10px;
+
+                .coupon__title {
+                    position: relative;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: center;
+                    flex: 0 0 auto;
+                    width: 35%;
+                    padding: 10px;
+
+                    @media (max-width: 991px) {
+                        width: 30%;
+                    }
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: -10px;
+                        right: -10px;
+                        width: 15px;
+                        height: 15px;
+                        background-color: #fff;
+                        border-radius: 100%;
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: -11px;
+                        right: -10px;
+                        width: 20px;
+                        height: 10px;
+                        background-color: #fff;
+                    }
+
+                    .couple__category {
+                        margin-bottom: 5px;
+                        font-size: 12px;
+                        font-weight: 700;
+                    }
+
+                    .coupon__max {
+                        font-size: 11px;
+                    }
+                }
+
+                .coupon__detail {
+                    position: relative;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: flex-start;
+                    flex: 0 0 auto;
+                    width: 65%;
+                    padding: 10px 10px 10px 15px;
+
+                    @media (max-width: 991px) {
+                        width: 70%;
+                    }
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        bottom: -10px;
+                        left: -10px;
+                        width: 15px;
+                        height: 15px;
+                        background-color: #fff;
+                        border-radius: 100%;
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: -11px;
+                        left: -10px;
+                        width: 20px;
+                        height: 10px;
+                        background-color: #fff;
+                    }
+
+                    .coupon__price {
+                        margin-bottom: 5px;
+                        font-size: 16px;
+                        font-weight: 700;
+                        letter-spacing: 0.5px;
+
+                        @media (max-width: 991px) {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .coupon__info {
+                        display: flex;
+                        flex-flow: column;
+                        align-items: flex-start;
+
+                        span {
+                            margin-bottom: 5px;
+                            font-size: 11px;
+                            text-align: left;
+                        }
+                    }
+                }
+
+                .coupon__footer {
+                    display: flex;
+                    flex-flow: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    .coupon__condition,
+                    .coupon__btn {
+                        a {
+                            display: inline-flex;
+                            padding: 5px 10px;
+                            text-decoration: none;
+                        }
+                    }
+
+                    .coupon__condition {
+                        a {
+                            border-radius: 15px;
+                            font-size: 11px;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .coupon__btn {
+                        a {
+                            border-radius: 5px;
+                            font-size: 12px;
+                            color: #fff;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .coupon__border {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 2px;
+                    height: calc(100% - 30px);
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
+        .swiperCoupoun {
+            .coupon__wrap {
+                border: 1px solid var(--blue);
+                background-color: rgba(var(--blueRGB), 0.1);
+
+                .coupon__title,
+                .coupon__detail {
+                    &:before {
+                        border: 1px solid var(--blue);
+                    }
+                }
+
+                .coupon__max,
+                .couple__category {
+                    color: var(--blue);
+                }
+
+                .coupon__price {
+                    color: var(--blue);
+                }
+
+                .coupon__info span {
+                    color: var(--blue);
+                }
+
+                .coupon__condition a {
+                    color: var(--blue);
+                    background-color: rgba(var(--blueRGB), 0.15);
+                }
+
+                .coupon__btn a {
+                    background-color: var(--blue);
+                }
+
+                .coupon__border {
+                    border-left: 1px dashed var(--blue);
+                }
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "WebPage",
+          "name": "CodeKshetra- Swags & Prizes",
+          "description": "Meet the talented individuals behind CodeKshetra.",
+          "url": "https://codekshetra.vercel.app/swags.html",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": "https://codekshetra.vercel.app/",
+                  "name": "Home"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": "https://codekshetra.vercel.app/swags.html",
+                  "name": "Swags and Prizes"
+                }
+              }
+            ]
+          }
+        }
+        </script>
+
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- ======= Header ======= -->
+    <header id="header"
+        class="d-flex align-items-center ">
+        <div class="container-fluid container-xxl d-flex align-items-center">
+            <div id="logo"
+                class="me-auto">
+                <h1>
+                    <img src="./assets/img/jims_logo.png"
+                        alt="Jims_logo"
+                        id="header-logo-img3"
+                        class="img-fluid"
+                        style="filter: brightness(0) invert(1);">
+
+                    <img src="./assets/img/logo.png"
+                        alt="Code Kshetra"
+                        id="header-logo-img1"
+                        class="img-fluid">
+
+                    <img src="./assets/img/geek_room_logo.png"
+                        alt="Code Kshetra"
+                        id="header-logo-img2"
+                        class="img-fluid">
+                    <a href=""
+                        id="header-logo-link"
+                        style="display: none;">
+                        Code<span>क्षेत्र</span>
+                    </a>
+                </h1>
+            </div>
+
+
+            <nav id="navbar"
+                class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto"
+                            href="./#hero">Home</a></li>
+                    <li><a class="nav-link scrollto"
+                            href="./#gallery">Themes</a></li>
+                    <li><a class="nav-link scrollto"
+                            href="./#schedule">Schedule</a></li>
+                    <li><a class="nav-link scrollto active"
+                            href="./#Prizes">Prizes</a></li>
+                    <li><a class="nav-link scrollto"
+                            href="./#judges">Judges</a></li>
+                    <li><a class="nav-link scrollto"
+                            href="./mentors.html">Mentors</a></li>
+                    <li><a class="nav-link scrollto"
+                            href="./our-team.html">Team</a></li>
+                    <li class="dropdown">
+                        <a href="#"><span>Get Involved</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="./become-a-sponsor.html"
+                                    target="_blank">
+                                    Become a sponsor
+                                </a></li>
+                            <li><a href="https://forms.gle/bwNw43F9rQpeoWu9A"
+                                    target="_blank">
+                                    Become a mentor
+                                </a></li>
+                            <li><a href="https://forms.gle/rwV1MszWUe1vKM4x8">
+                                    Become a Community Partner
+                                </a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <section id="swags"
+            class="section-with-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Swags</h2>
+                    <p>Check out the cool swags you can grab at Codekshetra Hackathon!</p>
+
+                </div>
+                <!-- Swag Images -->
+                <div class="row mx-auto">
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="card swag-card">
+                            <img class="card-img-top"
+                                src="./assets/img/Prizes/hoodie.jpeg"
+                                alt="Code Kshetra Hoodie">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Code Kshetra</b> Hoodie</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="card swag-card">
+                            <img class="card-img-top"
+                                src="./assets/img/Prizes/tshirt.png"
+                                alt="Code Kshetra T-shirt">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Code Kshetra</b> T-shirt</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="card swag-card">
+                            <img class="card-img-top"
+                                src="./assets/img/Prizes/mouse_pad.jpeg"
+                                alt="Mouse Pad">
+                            <div class="card-body">
+                                <h5 class="card-title">Mouse Pad</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="card swag-card">
+                            <img class="card-img-top"
+                                src="./assets/img/Prizes/mug.jpeg"
+                                alt="Code Kshetra Mug">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Code Kshetra</b> Mug</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="card swag-card">
+                            <img class="card-img-top"
+                                src="./assets/img/Prizes/bag.jpeg"
+                                alt="Code Kshetra Bag">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Code Kshetra</b> Bag</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 card justify-content-center col-md-6 mb-3">
+                        <div class="row  mt-4 mx-auto">
+                            <div class="col">
+                                <div class="swiper mySwiperNested swiperCoupoun">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="coupon__wrap">
+                                                <div class="coupon__title">
+                                                    <div class="couple__category">Postman API Kit</div>
+                                                    <div class="coupon__max">Free</div>
+                                                </div>
+                                                <div class="coupon__detail">
+                                                    <div class="coupon__price">No Cost</div>
+                                                    <div class="coupon__info">
+                                                        <span>Free access to Postman API Kit</span>
+                                                    </div>
+                                                    <div class="coupon__footer">
+                                                        <div class="coupon__condition">
+                                                            <a href="#"><small>*T&C's</small></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="coupon__border"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="swiper mySwiperNested swiperCoupoun">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="coupon__wrap">
+                                                <div class="coupon__title">
+                                                    <div class="couple__category">AR/VR Courses</div>
+                                                    <div class="coupon__max">Free</div>
+                                                </div>
+                                                <div class="coupon__detail">
+                                                    <div class="coupon__price">No Cost</div>
+                                                    <div class="coupon__info">
+                                                        <span>Free enrollment in AR/VR Courses</span>
+                                                    </div>
+                                                    <div class="coupon__footer">
+                                                        <div class="coupon__condition">
+                                                            <a href="#"><small>*T&C's</small></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="coupon__border"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-info">
+                        <div class="row d-flex align-items-center justify-content-center">
+                            <div class="container-fluid col">
+                                <div class="d-flex justify-content-center">
+                                    <img src="./assets/img/jims_logo.png"
+                                        class="img-fluid"
+                                        alt="Jims_logo"
+                                        style="filter: brightness(0) invert(1);">
+                                    <img src="./assets/img/logo.png"
+                                        class="img-fluid"
+                                        alt="Code Kshetra">
+                                    <img src="./assets/img/geek_room_logo.png"
+                                        class="img-fluid"
+                                        alt="Geek Room">
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>Code Kshetra, a groundbreaking hackathon by <a href="https://www.jimsindia.org/">JIMS
+                                Sector-5
+                                Rohini</a>
+                            and <a href="https://www.geekroom.in/"
+                                target="_blank"
+                                rel="noopener noreferrer">Geek Room</a>, redefines creativity and technology.
+                            Join us in the pursuit of innovation, transcending traditional hackathons.</p>
+
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="./#hero">Home</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="./#aboutCodeKshetra">About</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="./#gallery">Theme</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="./#schedule">Schedule</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="./code-of-conduct.html">Code of Conduct</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contact Us</h4>
+                        <p>
+                            JIMS, Near Rithala Metro Station Rohini Sector 5, Institutional Area, New Delhi, Delhi
+                            110085
+                            <br>
+                            <strong>Email:</strong> <br>
+                            <i class="bi bi-envelope"></i>
+                            <a href="mailto:codekshetra.hackathon@gmail.com"
+                                class="text-decoration-none">
+                                Code Kshetra
+                            </a> <br>
+                            <i class="bi bi-envelope"></i>
+                            <a href="mailto:purveshgupta19@gmail.com"
+                                class="text-decoration-none">
+                                Purvesh Gupta
+                            </a> <br>
+                            <i class="bi bi-envelope"></i>
+                            <a href="mailto:geekroom2003@gmail.com"
+                                class="text-decoration-none">
+                                Geek Room
+                            </a>
+                        </p>
+
+                        <div class="social-links">
+                            <a href="https://discord.com/invite/7TEVm4pmMv"
+                                target="_blank"
+                                class="discord"><i class="bi bi-discord"></i></a>
+                            <a href="https://www.instagram.com/geekroom_jims/"
+                                target="_blank"
+                                class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/geekr00m/"
+                                target="_blank"
+                                class="linkedin"><i class="bi bi-linkedin"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Get Involved</h4>
+                        <ul>
+                            <li><a href="./become-a-sponsor.html"
+                                    target="_blank"
+                                    class="get-involved-btn"> Become a sponsor
+                                </a></li>
+                            <li><a href="https://forms.gle/bwNw43F9rQpeoWu9A"
+                                    class="get-involved-btn"> Become a mentor
+                                </a></li>
+                            <li><a href="https://forms.gle/rwV1MszWUe1vKM4x8"
+                                    class="get-involved-btn"> Become a Community Partner
+                                </a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer><!-- End  Footer -->
+
+    <a href="#"
+        class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="./assets/vendor/aos/aos.js"></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="./assets/js/main.js"
+        defer></script>
+</body>
+
+</html>

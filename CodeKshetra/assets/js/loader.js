@@ -57,8 +57,11 @@ function renderJudges(start, end) {
 
         const image = document.createElement('img');
         image.src = judge.image;
+        image.style.width = '100%';
+        image.style.height = '100%';
         image.alt = `${judge.name} - Judge`;
         image.classList.add('img-fluid');
+        image.loading = 'lazy';
 
         const details = document.createElement('div');
         details.classList.add('details');
@@ -72,10 +75,8 @@ function renderJudges(start, end) {
         const social = document.createElement('div');
         social.classList.add('social');
 
-        const instaLink = createSocialLink('Instagram', `https://www.instagram.com/${judge.insta}`);
         const linkedinLink = createSocialLink('LinkedIn', `https://www.linkedin.com/in/${judge.linkedin}`);
 
-        social.appendChild(instaLink);
         social.appendChild(linkedinLink);
 
         details.appendChild(name);
@@ -94,7 +95,7 @@ function renderJudges(start, end) {
 // ---------------------- Mentors Section ----------------------
 const mentorsContainer = document.getElementById('mentors-container');
 const loadMoreMentorsBtn = document.getElementById('loadMoreMentorsBtn');
-const mentorsPerLoad = 12;
+const mentorsPerLoad = 35;
 let currentMentors = 0;
 let mentorsData = null;
 // Fetch mentors data from JSON file
@@ -112,7 +113,7 @@ async function fetchMentorsData() {
 }
 // Show more mentors on button click
 function showMoreMentors() {
-
+    loadMoreMentorsBtn.style.display = 'none';
     if (!mentorsData) {
         fetchMentorsData().then(() => showMoreMentors());
         return;
@@ -133,53 +134,79 @@ function showMoreMentors() {
         loadMoreMentorsBtn.style.display = 'none';
     }
 }
-// Render mentors on the webpage
+// Function to get initials from a name
+function getInitials(name) {
+    const nameParts = name.trim().split(' ');
+    const firstInitial = nameParts[0][0];
+    const lastInitial = nameParts[nameParts.length - 1][0];
+    return (firstInitial + lastInitial).toUpperCase();
+}
+// Render mentors in horizontal card layout on the webpage
 function renderMentors(start, end) {
-    mentorsData.slice(start, end).forEach((mentor, index) => {
+    const sortedMentors = mentorsData.slice(start, end).sort((a, b) => a.name.localeCompare(b.name));
+
+    sortedMentors.slice(start, end).forEach((mentor, index) => {
         const col = document.createElement('div');
-        col.classList.add('col-lg-3', 'col-md-4', 'mb-4');
+        col.classList.add('col-lg-3', 'col-md-3', 'mx-auto');
 
         const mentorCard = document.createElement('div');
-        mentorCard.classList.add('card', 'mentor-card');
-        mentorCard.setAttribute('data-aos', 'fade-up');
-        mentorCard.setAttribute('data-aos-delay', `${index * 100}`);
+        // mentorCard.classList.add('mentor');
+        mentorCard.classList.add('mentor');
 
-        const image = document.createElement('img');
-        image.src = mentor.image;
-        image.alt = `${mentor.name} - Mentor`;
-        image.classList.add('card-img-top', 'img-fluid');
-        image.loading = "lazy";
-        const cardBody = document.createElement('div');
-        cardBody.classList.add('card-body');
+        col.setAttribute('data-aos', 'fade-up, slide-in-right'); 
+        col.setAttribute('data-aos-delay', `${index * 200}`);
 
-        const name = document.createElement('h5');
-        name.classList.add('card-title');
+
+        // Display the mentor's image
+        const imgElement = document.createElement('img');
+        imgElement.style.cursor = 'pointer';
+        imgElement.style.width = '100%';
+        imgElement.style.height = '100%';
+        imgElement.loading = 'lazy';
+        imgElement.src = mentor.image;
+        imgElement.alt = `${mentor.name} - Mentor`;
+        imgElement.setAttribute('data-glightbox', '');
+        // Add custom data attributes for mentors details
+        imgElement.setAttribute('data-title', mentor.name);
+        imgElement.setAttribute('data-description', `${mentor.description}`);
+        imgElement.classList.add('img-fluid');
+
+
+        const details = document.createElement('div');
+        details.classList.add('details');
+
+        const name = document.createElement('h3');
         name.textContent = mentor.name;
 
-        const expertise = document.createElement('p');
-        expertise.classList.add('card-text');
-        expertise.textContent = mentor.description;
+        const role = document.createElement('p');
+        role.textContent = mentor.description;
 
         const social = document.createElement('div');
-        social.classList.add('social-icons');
+        social.classList.add('social');
 
-        const linkedinLink = createSocialLink('LinkedIn', `https://www.linkedin.com/in/${mentor.linkedin}`);
-        const instaLink = createSocialLink('Instagram', `https://www.instagram.com/${mentor.insta}`);
+        // Conditionally add social links if data is available
+        if (mentor.social.insta.trim() !== '') {
+            const instaLink = createSocialLink('Instagram', `https://www.instagram.com/${mentor.social.insta}`);
+            social.appendChild(instaLink);
+        }
 
-        social.appendChild(linkedinLink);
-        social.appendChild(instaLink);
+        if (mentor.social.linkedin.trim() !== '') {
+            const linkedinLink = createSocialLink('LinkedIn', `https://www.linkedin.com/in/${mentor.social.linkedin}`);
+            social.appendChild(linkedinLink);
+        }
 
-        cardBody.appendChild(name);
-        cardBody.appendChild(expertise);
-        cardBody.appendChild(social);
+        details.appendChild(name);
+        details.appendChild(role);
+        details.appendChild(social);
 
-        mentorCard.appendChild(image);
-        mentorCard.appendChild(cardBody);
+        mentorCard.appendChild(imgElement);
+        mentorCard.appendChild(details);
 
         col.appendChild(mentorCard);
         mentorsContainer.appendChild(col);
     });
 }
+
 
 // ---------------------- Team Members Section ----------------------
 let teamData = null;
@@ -265,7 +292,7 @@ function renderTeamMembers(category) {
             image.classList.add('image');
             const imgElement = document.createElement('img');
             imgElement.style.cursor = 'pointer';
-            imgElement.loading="lazy";
+            imgElement.loading = "lazy";
 
             // Check if the member's image is blank
             if (member.image.trim() === '') {
