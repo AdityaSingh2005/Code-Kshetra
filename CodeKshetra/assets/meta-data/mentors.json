@@ -1,3 +1,281 @@
 [
-
+    {
+        "name": "Chinmay Pant",
+        "image": "assets/img/mentors/chinmay_pant.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "chinmaypant",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Manav Gupta",
+        "image": "assets/img/mentors/manav_gupta.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "--manav-gupta--",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Manan Bedi",
+        "image": "assets/img/mentors/manan_bedi.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "manan-bedi2908",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Rohan Kumar",
+        "image": "assets/img/mentors/rohan_kumar.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "rohan-kumar-a65a87175",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Sanyam Jain",
+        "image": "assets/img/mentors/sanyam_jain.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "sanyam-jain-a5a15a220",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Nandini Singh",
+        "image": "assets/img/mentors/nandini_singh.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "nandinisingh05",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Abdal Lalit",
+        "image": "assets/img/mentors/abdal_lalit.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "abdal-lalit",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Vansh Kapoor",
+        "image": "assets/img/mentors/vansh_kapoor.jpeg",
+        "description": "",
+        "social": {
+            "linkedin":"vansh-kapoor",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Akshay Kumar Sharma",
+        "image": "assets/img/mentors/akshay_kumar_sharma.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "akshay-kumar-sharma-devvoyager",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Ekansh Mittal",
+        "image": "assets/img/mentors/ekansh_mittal.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "ekansh-mittal",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Abhinav Rai",
+        "image": "assets/img/mentors/abhinav_rai.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "abhinav-rai-6a7119154",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Harsh Raj",
+        "image": "assets/img/mentors/harsh_raj.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "harshraj2717",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Siddhartha Satyarthi",
+        "image": "assets/img/mentors/siddhartha_satyarthi.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "colossalmonk",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Chaitanya Gandhi",
+        "image": "assets/img/mentors/chaitanya_gandhi.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "chaitanya-gandhi-aaeb",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Harsh Vardhan Rana",
+        "image": "assets/img/mentors/harsh_vardhan_rana.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "iamharshvardhan",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Khushi Panwar",
+        "image": "assets/img/mentors/khushi_panwar.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "smilewithkhushi",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Arnav Kohli",
+        "image": "assets/img/mentors/arnav_kohli.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "arnav-kohli",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Mayank Mahajan",
+        "image": "assets/img/mentors/mayank_mahajan.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "mayankpmahajan",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Archit Kohli",
+        "image": "assets/img/mentors/archit_kohli.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "archit-kohli",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Siddharth Verma",
+        "image": "assets/img/mentors/siddharth_verma.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "siddharth-verma-53981a256",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Harshita Gupta",
+        "image": "assets/img/mentors/harshita_gupta.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "harshita-gupta-03b6b125b",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Purvesh Gupta",
+        "image": "assets/img/mentors/purvesh_gupta.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "purvesh-gupta-736b95256",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Pratham Batra",
+        "image": "assets/img/mentors/pratham_batra.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "pratham1908",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Manas Chopra",
+        "image": "assets/img/mentors/manas_chopra.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "themanas95826",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Arnav Gupta",
+        "image": "assets/img/mentors/arnav_gupta.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "arnav-gupta-437a66256",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Tanmay Arora",
+        "image": "assets/img/mentors/tanmayarora.jpg",
+        "description": "",
+        "social": {
+            "linkedin": "tanmaycode1",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Madhur Agrawal",
+        "image": "assets/img/mentors/madhur_agrawal.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "madhuragl",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Shivam Goyal",
+        "image": "assets/img/mentors/shivam_goyal.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "shivamgoyall",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Vani Mittal",
+        "image": "assets/img/mentors/vani_mittal.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "vani-mi-ttal",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Avnish Gupta",
+        "image": "assets/img/mentors/avnish_gupta.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "avnish-gupta-23245a273",
+            "insta": ""
+        }
+    },
+    {
+        "name": "Bimlesh Sharma",
+        "image": "assets/img/mentors/bimlesh_sharma.jpeg",
+        "description": "",
+        "social": {
+            "linkedin": "bimlesharma",
+            "insta": ""
+        }
+    }
 ]

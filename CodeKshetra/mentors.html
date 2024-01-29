@@ -94,41 +94,116 @@
         }
 
         #mentors {
-            margin-top: 70px;
+            padding: 70px 10px;
         }
 
-        .card.mentor-card {
-            border: 1px solid #dee2e6;
-            border-radius: 10px;
+        #mentors .mentor {
+            position: relative;
             overflow: hidden;
+            margin-bottom: 30px;
         }
 
-        .card.mentor-card img.card-img-top {
-            border-bottom: 1px solid #dee2e6;
+        #mentors .mentor .details {
+            background: rgba(6, 12, 34, 0.76);
+            position: absolute;
+            left: 0;
+            bottom: -40px;
+            right: 0;
+            text-align: center;
+            padding-top: 10px;
+            transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
         }
 
-        .card.mentor-card .card-body {
-            padding: 20px;
+        #mentors .mentor .details h3 {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 5px;
         }
 
-        .card.mentor-card h5.card-title {
-            font-size: 1.5rem;
+        #mentors .mentor .details p {
+            color: #fff;
+            font-size: 15px;
             margin-bottom: 10px;
-            font-weight: 500;
-            color: #0e1b4d;
+            font-style: italic;
         }
 
-        .card.mentor-card p.card-text {
-            font-size: 1rem;
+        #mentors .mentor .details .social {
+            height: 40px;
         }
 
-        .card.mentor-card .social-icons {
-            margin-top: 15px;
+        #mentors .mentor .details .social i {
+            line-height: 0;
+            margin: 0 2px;
         }
 
-        .card.mentor-card .social-icons a {
-            font-size: 1.2rem;
-            margin-right: 10px;
+        #mentors .mentor .details a {
+            color: #fff;
+        }
+
+        #mentors .mentor .details a:hover {
+            color: #A90377;
+        }
+
+        #mentors .mentor:hover .details {
+            bottom: 0;
+        }
+
+        #mentors-details {
+            padding: 60px 0;
+        }
+
+        #mentors-details .details h2 {
+            color: #112363;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        #mentors-details .details .social {
+            margin-bottom: 15px;
+        }
+
+        #mentors-details .details .social a {
+            background: #e9edfb;
+            color: #112363;
+            line-height: 1;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        #mentors-details .details .social a:hover {
+            background: #A90377;
+            color: #fff;
+        }
+
+        #mentors-details .details .social a i {
+            font-size: 16px;
+            line-height: 0;
+        }
+
+        #mentors-details .details p {
+            color: #112363;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .initials {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            /* Adjust font size as needed */
+            font-weight: bold;
+            color: white;
         }
     </style>
     <script type="application/ld+json">

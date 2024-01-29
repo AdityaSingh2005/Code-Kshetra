@@ -1,3 +1,26 @@
 [
-   
+    {
+        "image": "assets/img/judges/ayon_roy.jpeg",
+        "name": "Ayon Roy",
+        "linkedin": "ayon-roy",
+        "designation": "Executive Data Scientist"
+    },
+    {
+        "image": "assets/img/judges/maninder_singh.jpeg",
+        "name": "Maninder Singh",
+        "linkedin": "manindersinghh",
+        "designation": "iOS Developer at BluSmart"
+    },
+    {
+        "image": "assets/img/judges/pranav_malik.jpeg",
+        "name": "Pranav Malik",
+        "linkedin": "candidatepstx-95adfsdk23",
+        "designation": "SDE-2 Microsoft"
+    },
+    {
+        "image": "assets/img/judges/srishti_gupta.jpeg",
+        "name": "Srishti Gupta",
+        "linkedin": "srishti23",
+        "designation": "Microsoft Speaker| EY "
+    }
 ]
